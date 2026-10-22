@@ -1,0 +1,42 @@
+# ---- Python / 虚拟环境 ----
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# ---- 数据集（公开数据，本地下载，脚本可复现）----
+data/
+CWRU-dataset-main/
+
+# ---- 运行产物 / 模型权重（本地结果，可复现）----
+runs/
+_tree_tmp/
+*.log
+**/checkpoint.pt
+
+# ---- IDE / 工具 ----
+.claude/
+.idea/
+.vscode/
+
+# ---- 现场数据 / 合同 / 内部管理文档（不入库）----
+Centrifugal compressor _2022.xlsx
+Descriptor_Refinery_Compressor_Sensor_Data_One-Year_Dataset_RCSD-1YD.pdf
+附件一*.doc
+附件一*.docx
+压缩机项目分工*.xlsx
+压缩机项目算法开发分工与实施方案.docx
+项目算法清单.xlsx
+
+# ---- 汇报材料 / 旧版代码 / 非交付物 ----
+*.pptx
+第一阶段工作介绍_延迟反馈切入_v5.pptx
+/src/
+/scripts/
+/故障诊断算子.py
+/数据存储.py
+/新算子封装.md
+/docs/15分钟汇报讲稿.md
+/docs/PPT汇报讲解手册.md
