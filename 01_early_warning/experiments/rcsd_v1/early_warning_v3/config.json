@@ -1,0 +1,14 @@
+{
+  "version": "3.0.0",
+  "cusum_allowance": 0.05,
+  "calibration_quantile": 0.995,
+  "groups": {
+    "temperature": {"75TI829.pv": 1, "75TI830.pv": 1, "75TI831.pv": 1, "75TI832.pv": 1, "75TI834.pv": 1, "75TI836.pv": 1},
+    "oil_pressure": {"75PI808.pv": -1, "75PI823.pv": -1},
+    "vibration_axial": {"75XI823BX.pv": 1, "75XI824BX.pv": 1, "75ZI801BA.pv": -1, "75ZI801BB.pv": -1}
+  },
+  "alarm_consecutive_points": 3,
+  "recovery_consecutive_points": 4,
+  "recovery_threshold_ratio": 0.7,
+  "test_scored": false
+}

@@ -1,0 +1,22 @@
+{
+  "task": "RCSD controlled-v2 DI regression and fixed four-level risk; training-period comparison only",
+  "history_points": 96,
+  "sampling_minutes": 15,
+  "training_stride": 4,
+  "fold_block_ranges": [[12,18],[18,24],[24,31]],
+  "stochastic_seeds": [20261023,20261024,20261025],
+  "reference_seed": 20261024,
+  "candidates": ["constant","ridge_current","ridge_history","trees_current","trees_history","gradient_boosting_history","lstm_window"],
+  "ridge_alpha": 10,
+  "trees": {"n_estimators":48,"max_depth":14,"min_samples_leaf":8,"max_features":0.8},
+  "gradient_boosting": {"max_iter":100,"learning_rate":0.05,"max_leaf_nodes":15,"min_samples_leaf":20,"l2_regularization":1.0},
+  "lstm": {"hidden_size":24,"num_layers":1,"epochs":6,"batch_size":128,"learning_rate":0.001},
+  "threads": 2,
+  "primary_comparison": "scene-macro DI MAE, average seeds within fold then average three folds equally",
+  "additional_metrics": ["point_mae","point_rmse","risk_accuracy","risk_macro_f1","risk_underestimate_fraction","risk_overestimate_fraction","risk_recall_I_to_IV","background_macro_mae"],
+  "selection": "descriptive fixed-configuration comparison; no hyperparameter tuning or delivery replacement",
+  "budget_note": "LSTM uses existing 6-epoch configuration; this does not establish tuned or converged performance of the model family",
+  "data_note": "fixed v2 generation used Jan-Jun amplitude statistics; only model-fitting splits are time-forward; these training backgrounds have already been used in development",
+  "development_validation_read": false,
+  "final_test_read": false
+}

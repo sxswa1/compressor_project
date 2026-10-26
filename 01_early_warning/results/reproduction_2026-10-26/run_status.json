@@ -1,0 +1,22 @@
+{
+  "status": "COMPLETED_PENDING_VERIFICATION",
+  "split": "test",
+  "scenes": 844,
+  "warning_configurations": 26,
+  "regression_point_models": 34,
+  "seconds": 987.7969999999999,
+  "method_or_threshold_changes": false,
+  "final_test_read": true,
+  "stress_di_rul": "Not scored: original stress data has no DI/RUL reference labels",
+  "input_source_last_timestamp": "2022-12-31 23:45:00",
+  "code_sha256": {
+    "check_metrics.py": "8066cbcceb33a93d0bed26956dd04bf86a296b41d3678131cf94c0fafec0fab4",
+    "common.py": "df12c884f35fe39709ae0a847b662e95815e2588cef38efb682fb00c39cdeb34",
+    "evaluate.py": "5871a956b1e6b195740e398d12069030c32edbb2b1e2370e95537ef84dc712a0",
+    "generate.py": "1800108140c12cce28cb4c1a0e83f83512b3448f82d7268436674740f8f393ac",
+    "metrics.py": "07ec3c016c8822433cb32fff72584d30d4acf24fd7b34c87b692badce6f43fc6",
+    "reserved_io.py": "6eac5e9e9301f30e83e8664391326da14486fd1522a0f451fbe4b8a021ea80bf",
+    "summaries.py": "7c5307cdb5772d1b77b9049611746b42f2cc474cbe3caf56ea6a923ee1254d9e",
+    "verify_reserved_dataset.py": "6f8dd8bfbd54faf27f370c0f62af21bcdba7d9c843ee9c4e4b299fed032ce178"
+  }
+}

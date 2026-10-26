@@ -1,0 +1,20 @@
+{
+  "task": "Training-internal chronological LSTM epoch selection for DI regression",
+  "fold_block_ranges": [[12,18],[18,24],[24,31]],
+  "inner_fit_backgrounds": [9,13,18],
+  "history_points": 96,
+  "sampling_minutes": 15,
+  "training_stride": 4,
+  "stochastic_seeds": [20261023,20261024,20261025],
+  "threads": 2,
+  "lstm": {"hidden_size":24,"num_layers":1,"batch_size":128,"learning_rate":0.001},
+  "stopping": {"max_epochs":40,"minimum_epochs":6,"patience":6,"min_delta":0.0001},
+  "selection_metric": "clipped DI scene-macro MAE on the inner validation backgrounds",
+  "refit": "For each fold and seed, refit from scratch on all outer-fit samples for its selected epoch count",
+  "evaluation": "Use exactly the prior outer evaluation keys; compare the same seeds to the saved 6-epoch predictions",
+  "scope": "One fixed-budget follow-up; no architecture, feature, seed, threshold or outer-score-based search",
+  "limitations": ["Prior outer-fold results have been observed during development", "Fixed v2 augmentation amplitudes use all Jan-Jun backgrounds", "Training-internal early stopping does not establish fully tuned LSTM performance"],
+  "development_validation_read": false,
+  "final_test_read": false,
+  "delivery_replacement": false
+}

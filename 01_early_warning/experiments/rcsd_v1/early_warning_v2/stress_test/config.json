@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "purpose": "Development boundary tests; no retraining or threshold tuning",
+  "source_split": "validation",
+  "block_points": 1536,
+  "prelude_points": 96,
+  "ramp_hours": [24, 72, 168, 288],
+  "plateau_hours": 48,
+  "amplitude_multipliers": [0.5, 1.0],
+  "training_scale_multiplier": 6,
+  "startup_points": 384,
+  "spike_points": [1, 2, 4],
+  "spike_scale_multipliers": [2, 6],
+  "spike_channels": ["75TI834.pv", "75XI823BX.pv", "75PI823.pv"],
+  "spike_scene_points": 192,
+  "selected_method": "change24_ewma",
+  "random_sampling": false,
+  "test_scored": false
+}

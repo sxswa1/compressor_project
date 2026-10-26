@@ -1,0 +1,36 @@
+{
+  "version": "1.0",
+  "kind": "post-test-motivated training-period auxiliary experiment",
+  "created": "2026-10-25",
+  "scope": "One fading-memory CUSUM candidate, no grid search or replacement of frozen models",
+  "calendar": {
+    "reference_fit": ["2022-01-01", "2022-03-01"],
+    "residual_scaling": ["2022-03-01", "2022-04-01"],
+    "threshold_calibration": ["2022-04-01", "2022-05-01"],
+    "evaluation": ["2022-05-01", "2022-07-01"]
+  },
+  "reference": {"model": "StandardScaler + Ridge", "alpha": 10, "stride": 4, "targets_source": "early_warning_v1/config.json", "context": "Other 13 observable sensors", "candidates_only": true},
+  "normalization": {"history_points": 96, "quantile": 0.995, "scale": "median and 1.4826 MAD, original sensor-type floors, then per-channel tail scale"},
+  "cumulative": {"groups_source": "early_warning_v3/config.json", "allowance": 0.05, "baseline_decay": 1.0, "candidate_half_life_hours": 24, "sample_hours": 0.25, "formula": "pos=max(0,decay*pos+v-allowance); neg=max(0,decay*neg-v-allowance)", "interpretation": "Exponential fading, not a hard 24-hour cutoff; half-life fixed to existing 96-point/24-hour feature scale before evaluation"},
+  "calibration": {"quantile": 0.995, "group_scale_floor": 1.0, "each_variant": "Own April group 0.995 quantiles and global max-score 0.995 threshold; same protocol, not equal false-positive rate"},
+  "events": {"alarm_points": 3, "recovery_points": 4, "recovery_ratio": 0.7, "ewma_alpha": 0.2, "limits": "Original target-channel limits", "valid": "Current and prior 96 samples finite; current speed 6050-8500; reset at invalid output and timestamp gaps", "paired": "New event strictly after synthetic onset and at least 2 h before synthetic endpoint; exclude paired raw-control alarm at event and previous two samples"},
+  "evaluation_data": {
+    "main": "All existing controlled-v2 training main scenes whose full source background starts >= May 1 and ends before July 1; retain censored outputs, no invented endpoints",
+    "stress": "All nonoverlapping 1536-point candidate-normal blocks within May-June; original ramp/plateau rules, three groups, amplitudes 0.5/1.0, durations 24/72/168/288 h, prelude 96 points, plateau 48 h",
+    "empirical": "All May-June raw observations, split only at time gaps; do not delete high-alarm or non-candidate periods",
+    "generator_limitation": "Existing v2 amplitudes and v1 stress scales use Jan-June statistics; this is model-forward training-side diagnosis, not a fully forward-generated independent test",
+    "plateau": "Remaining active after a plateau is not fault-resolution truth; never interpret fading alarm as restored equipment health"
+  },
+  "advance_rule": {
+    "purpose": "Conservative pilot screening rule, not a project or publication acceptance target",
+    "all_required": [
+      "candidate combined empirical active fraction strictly below baseline combined",
+      "candidate combined longest observed active episode no longer than baseline",
+      "candidate combined main paired >=2h count no lower than baseline",
+      "candidate combined paired >=2h count no lower in each stress duration/amplitude stratum",
+      "candidate combined retains every baseline-CUSUM-only timely hit against EWMA in weak 168h/288h stress strata"
+    ],
+    "stop": "If any condition fails or support is absent, do not advance; report complete results and do not change half-life, thresholds, evaluation scenes or rules in this run"
+  },
+  "no_final_test_use": "Do not parse July-December observations, train on them, or rescore them. Historical knowledge motivated this candidate, so this is explicitly post-test exploration."
+}

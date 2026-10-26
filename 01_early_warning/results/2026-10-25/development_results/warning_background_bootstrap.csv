@@ -1,0 +1,19 @@
+family,metric,backgrounds,draws,bootstrap_seed,estimate,low,high,difference_vs_primary_low,difference_vs_primary_high,interpretation
+static,paired_2h_coverage,11,2000,2026102404,0.8717948717948718,0.6900951161514541,1.0,-0.30990488384854586,0.0,descriptive paired background bootstrap on one machine; seeds averaged within draws
+persistence,paired_2h_coverage,11,2000,2026102404,0.0,0.0,0.0,-1.0,-1.0,descriptive paired background bootstrap on one machine; seeds averaged within draws
+ridge_forecast,paired_2h_coverage,11,2000,2026102404,0.41025641025641024,0.3513338013338014,0.46835443037974683,-0.6486661986661987,-0.5316455696202531,descriptive paired background bootstrap on one machine; seeds averaged within draws
+change_ewma,paired_2h_coverage,11,2000,2026102404,0.9615384615384616,0.9240506329113924,1.0,-0.07594936708860756,0.0,descriptive paired background bootstrap on one machine; seeds averaged within draws
+cusum,paired_2h_coverage,11,2000,2026102404,0.9871794871794872,0.961038961038961,1.0,-0.038961038961038974,0.0,descriptive paired background bootstrap on one machine; seeds averaged within draws
+lstm,paired_2h_coverage,11,2000,2026102404,0.8931623931623932,0.8137196545284782,0.9629629629629629,-0.18628034547152184,-0.03703703703703709,descriptive paired background bootstrap on one machine; seeds averaged within draws
+iforest,paired_2h_coverage,11,2000,2026102404,0.0,0.0,0.0,-1.0,-1.0,descriptive paired background bootstrap on one machine; seeds averaged within draws
+v3_core,paired_2h_coverage,11,2000,2026102404,1.0,1.0,1.0,0.0,0.0,descriptive paired background bootstrap on one machine; seeds averaged within draws
+limits,paired_2h_coverage,11,2000,2026102404,0.0,0.0,0.0,-1.0,-1.0,descriptive paired background bootstrap on one machine; seeds averaged within draws
+static_limits,paired_2h_coverage,11,2000,2026102404,0.8717948717948718,0.6900951161514541,1.0,-0.30990488384854586,0.0,descriptive paired background bootstrap on one machine; seeds averaged within draws
+persistence_limits,paired_2h_coverage,11,2000,2026102404,0.0,0.0,0.0,-1.0,-1.0,descriptive paired background bootstrap on one machine; seeds averaged within draws
+ridge_forecast_limits,paired_2h_coverage,11,2000,2026102404,0.41025641025641024,0.3513338013338014,0.46835443037974683,-0.6486661986661987,-0.5316455696202531,descriptive paired background bootstrap on one machine; seeds averaged within draws
+change_ewma_limits,paired_2h_coverage,11,2000,2026102404,0.9615384615384616,0.9240506329113924,1.0,-0.07594936708860756,0.0,descriptive paired background bootstrap on one machine; seeds averaged within draws
+cusum_limits,paired_2h_coverage,11,2000,2026102404,0.9871794871794872,0.961038961038961,1.0,-0.038961038961038974,0.0,descriptive paired background bootstrap on one machine; seeds averaged within draws
+lstm_limits,paired_2h_coverage,11,2000,2026102404,0.8931623931623932,0.8137196545284782,0.9629629629629629,-0.18628034547152184,-0.03703703703703709,descriptive paired background bootstrap on one machine; seeds averaged within draws
+iforest_limits,paired_2h_coverage,11,2000,2026102404,0.0,0.0,0.0,-1.0,-1.0,descriptive paired background bootstrap on one machine; seeds averaged within draws
+v3_core_limits,paired_2h_coverage,11,2000,2026102404,1.0,1.0,1.0,0.0,0.0,descriptive paired background bootstrap on one machine; seeds averaged within draws
+original_v3,paired_2h_coverage,11,2000,2026102404,1.0,1.0,1.0,0.0,0.0,descriptive paired background bootstrap on one machine; seeds averaged within draws

@@ -1,0 +1,82 @@
+360 existing auxiliary scenes reconstructed successfully
+start di/constant__20261024: 11928 fit samples
+done di/constant__20261024: 0.1s
+start di/ridge_current__20261024: 11928 fit samples
+done di/ridge_current__20261024: 0.2s
+start di/ridge_history__20261024: 11928 fit samples
+done di/ridge_history__20261024: 0.3s
+start di/trees_current__20261023: 11928 fit samples
+done di/trees_current__20261023: 2.0s
+start di/trees_current__20261024: 11928 fit samples
+done di/trees_current__20261024: 2.2s
+start di/trees_current__20261025: 11928 fit samples
+done di/trees_current__20261025: 2.1s
+start di/trees_history__20261023: 11928 fit samples
+done di/trees_history__20261023: 7.8s
+start di/trees_history__20261024: 11928 fit samples
+done di/trees_history__20261024: 7.7s
+start di/trees_history__20261025: 11928 fit samples
+done di/trees_history__20261025: 7.9s
+start di/gradient_boosting_history__20261024: 11928 fit samples
+D:\python\Lib\site-packages\joblib\externals\loky\backend\context.py:136: UserWarning: Could not find the number of physical cores for the following reason:
+found 0 physical cores < 1
+Returning the number of logical cores instead. You can silence this warning by setting LOKY_MAX_CPU_COUNT to the number of cores you want to use.
+  warnings.warn(
+  File "D:\python\Lib\site-packages\joblib\externals\loky\backend\context.py", line 282, in _count_physical_cores
+    raise ValueError(f"found {cpu_count_physical} physical cores < 1")
+done di/gradient_boosting_history__20261024: 2.1s
+start di/lstm_window__20261023: 11928 fit samples
+di/lstm_window__20261023: selected 39, ran 40; refitting
+done di/lstm_window__20261023: 144.5s
+start di/lstm_window__20261024: 11928 fit samples
+di/lstm_window__20261024: selected 39, ran 40; refitting
+done di/lstm_window__20261024: 111.2s
+start di/lstm_window__20261025: 11928 fit samples
+di/lstm_window__20261025: selected 19, ran 25; refitting
+done di/lstm_window__20261025: 60.3s
+start rul/median__raw_original__20261024: 3256 fit samples
+done rul/median__raw_original__20261024: 0.0s
+start rul/ridge_history__raw_original__20261024: 3256 fit samples
+done rul/ridge_history__raw_original__20261024: 0.1s
+start rul/trees_history__raw_original__20261023: 3256 fit samples
+done rul/trees_history__raw_original__20261023: 3.7s
+start rul/trees_history__raw_original__20261024: 3256 fit samples
+done rul/trees_history__raw_original__20261024: 2.8s
+start rul/trees_history__raw_original__20261025: 3256 fit samples
+done rul/trees_history__raw_original__20261025: 2.7s
+start rul/gradient_boosting_history__raw_original__20261024: 3256 fit samples
+done rul/gradient_boosting_history__raw_original__20261024: 1.0s
+start rul/lstm_window__raw_original__20261023: 3256 fit samples
+rul/lstm_window__raw_original__20261023: selected 4, ran 10; refitting
+done rul/lstm_window__raw_original__20261023: 5.7s
+start rul/lstm_window__raw_original__20261024: 3256 fit samples
+rul/lstm_window__raw_original__20261024: selected 5, ran 11; refitting
+done rul/lstm_window__raw_original__20261024: 6.4s
+start rul/lstm_window__raw_original__20261025: 3256 fit samples
+rul/lstm_window__raw_original__20261025: selected 6, ran 12; refitting
+done rul/lstm_window__raw_original__20261025: 6.8s
+start rul/trees_history__residual_original__20261023: 3256 fit samples
+done rul/trees_history__residual_original__20261023: 2.1s
+start rul/trees_history__residual_original__20261024: 3256 fit samples
+done rul/trees_history__residual_original__20261024: 2.2s
+start rul/trees_history__residual_original__20261025: 3256 fit samples
+done rul/trees_history__residual_original__20261025: 2.0s
+start rul/gradient_boosting_history__residual_original__20261024: 3256 fit samples
+done rul/gradient_boosting_history__residual_original__20261024: 0.8s
+start rul/trees_history__raw_augmented__20261023: 17656 fit samples
+done rul/trees_history__raw_augmented__20261023: 19.0s
+start rul/trees_history__raw_augmented__20261024: 17656 fit samples
+done rul/trees_history__raw_augmented__20261024: 15.8s
+start rul/trees_history__raw_augmented__20261025: 17656 fit samples
+done rul/trees_history__raw_augmented__20261025: 16.1s
+start rul/gradient_boosting_history__raw_augmented__20261024: 17656 fit samples
+done rul/gradient_boosting_history__raw_augmented__20261024: 2.2s
+start rul/trees_history__residual_augmented__20261023: 17656 fit samples
+done rul/trees_history__residual_augmented__20261023: 20.2s
+start rul/trees_history__residual_augmented__20261024: 17656 fit samples
+done rul/trees_history__residual_augmented__20261024: 17.9s
+start rul/trees_history__residual_augmented__20261025: 17656 fit samples
+done rul/trees_history__residual_augmented__20261025: 16.0s
+start rul/gradient_boosting_history__residual_augmented__20261024: 17656 fit samples
+done rul/gradient_boosting_history__residual_augmented__20261024: 2.0s
+All 34 point models fitted; reference and four interval calibrations saved.

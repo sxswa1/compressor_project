@@ -1,0 +1,17 @@
+{
+  "version": "1.0",
+  "fit_start": "2022-01-01", "inner_fit_before": "2022-04-01",
+  "fit_before": "2022-05-01", "calibration_before": "2022-07-01",
+  "evaluation_before": "2022-09-01", "history": 96, "stride": 4,
+  "seeds": [20261023, 20261024, 20261025],
+  "quantile": 0.995, "alarm_consecutive_points": 3,
+  "recovery_consecutive_points": 4, "recovery_threshold_ratio": 0.7,
+  "lstm": {"hidden": 24, "max_epochs": 30, "patience": 5, "min_delta": 0.0001, "lr": 0.001, "batch_size": 128},
+  "isolation_forest": {"n_estimators": 200, "max_samples": 256},
+  "comparison": "Frozen warning components, robust static level, persistence, Ridge forecast, Isolation Forest current sensors, causal LSTM next-step residual; data-only and identical paper-limit branch",
+  "selection": "LSTM epoch selection only Jan-Mar fit / Apr validation normalized prediction MSE; refit Jan-Apr; all thresholds May-Jun normal candidates; no scenario-label tuning",
+  "evaluation": "All v2 development validation scenes and existing stress scenes; empirical Jul-Aug replay; new-start events, no backdating, paired raw control, >=2h lead",
+  "common_support": "Current and previous 96 rows finite; current speed 6050-8500; reset at timestamp gaps. Limits share this gate in matched comparison; original v3 separately retained as anchor.",
+  "limitations": "One development calendar split, reused development backgrounds, no real failure ground truth. Same quantile is not equal false-alarm rate. Three seeds are not independent equipment.",
+  "final_test_scored": false, "replace_delivery": false
+}

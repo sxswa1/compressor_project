@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "analytical_DI_RUL_edge_cases": true,
+  "bootstrap_family_intervals_recomputed": 36,
+  "draws": 2000,
+  "seed": 2026102404,
+  "sha256": {
+    "metrics.py": "07ec3c016c8822433cb32fff72584d30d4acf24fd7b34c87b692badce6f43fc6",
+    "summaries.py": "7c5307cdb5772d1b77b9049611746b42f2cc474cbe3caf56ea6a923ee1254d9e",
+    "check_metrics.py": "8066cbcceb33a93d0bed26956dd04bf86a296b41d3678131cf94c0fafec0fab4"
+  }
+}

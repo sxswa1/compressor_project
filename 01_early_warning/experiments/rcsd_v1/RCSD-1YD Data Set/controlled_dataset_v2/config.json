@@ -1,0 +1,30 @@
+{
+  "version": "2.0.0-controlled",
+  "purpose": "controlled workflow experiment plus separately named robustness scenarios; not a replacement for v1",
+  "splits_built": ["train", "validation"],
+  "seeds": {"train": 2026102201, "validation": 2026102202},
+  "sample_minutes": 15,
+  "onset_range_inclusive": [96, 144],
+  "duration_hours": [12, 24, 48, 72],
+  "damage_exponents": [1.0, 1.5, 2.0],
+  "main_response_power": 1.0,
+  "main_response_lag_points": 0,
+  "amplitude_scale_multiplier": 6.0,
+  "censor_probability": 0.2,
+  "censor_fraction_range": [0.55, 0.85],
+  "robustness_source": "validation linear main scenes only; no independent samples implied",
+  "robustness": [
+    {"name": "amplitude_075", "amplitude_multiplier": 0.75, "response_power": 1.0, "lag_points": 0},
+    {"name": "amplitude_125", "amplitude_multiplier": 1.25, "response_power": 1.0, "lag_points": 0},
+    {"name": "lag_8", "amplitude_multiplier": 1.0, "response_power": 1.0, "lag_points": 8},
+    {"name": "response_power_13", "amplitude_multiplier": 1.0, "response_power": 1.3, "lag_points": 0},
+    {"name": "combined_weak_lag", "amplitude_multiplier": 0.75, "response_power": 1.3, "lag_points": 8}
+  ],
+  "groups": {
+    "thermal": {"75TI829.pv": 1, "75TI830.pv": 1, "75TI834.pv": 1, "75TI836.pv": 1},
+    "oil_thermal": {"75PI808.pv": -1, "75PI823.pv": -1, "75TI834.pv": 1, "75TI836.pv": 1},
+    "vibration_axial": {"75XI823BX.pv": 1, "75XI824BX.pv": 1, "75ZI801BA.pv": -1, "75ZI801BB.pv": -1}
+  },
+  "test_policy": "September-December blocks remain reserved; no v2 test scenes built or scored in this step",
+  "warning": "DI and endpoints are synthetic references. Fixed response removes selected confounders, not background uncertainty or unpredictable future evolution."
+}

@@ -1,0 +1,10 @@
+source,stratum,scenes,baseline_combined,candidate_combined,gained,lost,baseline_cusum_only,baseline_cusum_only_retained
+stress,ramp_168h_amp0.5,6,5,4,0,1,4,3
+stress,ramp_168h_amp1,6,5,5,0,0,0,0
+stress,ramp_24h_amp0.5,6,6,6,0,0,0,0
+stress,ramp_24h_amp1,6,6,6,0,0,0,0
+stress,ramp_288h_amp0.5,6,4,4,1,1,4,2
+stress,ramp_288h_amp1,6,5,5,1,1,3,3
+stress,ramp_72h_amp0.5,6,4,4,0,0,1,0
+stress,ramp_72h_amp1,6,6,6,0,0,0,0
+v2,main,58,48,40,0,8,5,0
