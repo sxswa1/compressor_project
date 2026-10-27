@@ -21,7 +21,6 @@
 from __future__ import annotations
 
 import logging
-from typing import Dict
 
 import numpy as np
 import pandas as pd
@@ -32,8 +31,6 @@ from torch import nn
 from torch.autograd import Function
 from torch.utils.data import DataLoader, Dataset
 
-logging.basicConfig(level=logging.INFO,
-                    format="%(asctime)s - %(levelname)s - %(message)s")
 logger = logging.getLogger("CrossConditionDiagnosis")
 
 FEAT_DIM = 256
@@ -274,27 +271,33 @@ def _normalize(samples: np.ndarray) -> np.ndarray:
     return (samples - mu) / std
 
 
+# 输出表列结构（空输入分支与正常分支保持一致）
+_RESULT_COLUMNS = ["sample_id", "pred_class", "class_name", "confidence", "rpm", "model"]
+_SUMMARY_COLUMNS = ["class_name", "count", "ratio", "model"]
+
+
 # ===================== 标准入口 =====================
 def execute(df: pd.DataFrame, mode: str = "deep", model_name: str = "src_wdcnn",
             checkpoint: str = "", sample_rate: int = 12000, window_len: int = 1024,
             overlap: float = 0.5, signal_col: str = "signal", rpm_col: str = "rpm",
-            **kwargs) -> Dict[str, pd.DataFrame]:
+            **kwargs) -> dict[str, pd.DataFrame]:
     node = "CrossConditionDiagnosis"
+    empty_result = pd.DataFrame(columns=_RESULT_COLUMNS)
+    empty_summary = pd.DataFrame(columns=_SUMMARY_COLUMNS)
     if df is None or df.empty:
-        logger.warning(f"[{node}] DataFrame 为空，跳过诊断。")
-        return {"out_1": pd.DataFrame([{"status": "skipped", "diagnosed_samples": 0}])}
+        logger.warning(f"[{node}] 输入表为空，返回空结果。")
+        return {"out_1": empty_result, "out_2": empty_summary}
 
     x, rpm = _extract_signal(df, signal_col, rpm_col)
     windows = _sliding_windows(x, window_len, overlap)
     if len(windows) == 0:
-        return {"out_1": pd.DataFrame([{
-            "status": "insufficient_data", "signal_length": int(len(x)),
-            "window_len": int(window_len)}])}
+        logger.warning(f"[{node}] 信号长度不足以切出窗口，返回空结果。")
+        return {"out_1": empty_result, "out_2": empty_summary}
 
     if mode == "deep":
         if not checkpoint:
             raise FileNotFoundError("deep 模式需要 checkpoint 参数（模型权重路径）。")
-        ckpt = torch.load(checkpoint, map_location="cpu", weights_only=False)
+        ckpt = torch.load(checkpoint, map_location="cpu", weights_only=True)
         class_names = list(ckpt.get("class_names") or CLASS_NAMES_ZH.keys())
         model = create_model(model_name, num_classes=len(class_names))
         model.load_state_dict(ckpt["state_dict"])
@@ -330,10 +333,9 @@ def execute(df: pd.DataFrame, mode: str = "deep", model_name: str = "src_wdcnn",
         "pred_class": pred_code,
         "class_name": pred_zh,
         "confidence": np.round(conf, 4),
+        "rpm": rpm,
+        "model": used_model,
     })
-    if rpm is not None:
-        result["rpm"] = rpm
-    result["model"] = used_model
 
     counts = result["class_name"].value_counts()
     summary = pd.DataFrame([{
