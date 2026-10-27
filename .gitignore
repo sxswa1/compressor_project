@@ -40,3 +40,8 @@ Descriptor_Refinery_Compressor_Sensor_Data_One-Year_Dataset_RCSD-1YD.pdf
 /新算子封装.md
 /docs/15分钟汇报讲稿.md
 /docs/PPT汇报讲解手册.md
+
+# Local few-shot study outputs; reviewed summaries live under results/.
+/02_few_shot_diagnosis/outputs/*
+!/02_few_shot_diagnosis/outputs/.gitkeep
+/02_few_shot_diagnosis/deliverables/

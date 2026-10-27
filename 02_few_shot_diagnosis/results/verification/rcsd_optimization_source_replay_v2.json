@@ -1,0 +1,25 @@
+{
+  "archive": "[local evidence retained separately]",
+  "archive_sha256": "7cce8f03f6bed56e262c15da3d29a523ca13310f1195d9a869ce2155147a9c62",
+  "external_dir": "[local evidence retained separately]",
+  "source_replay_passed": true,
+  "files_byte_identical": [
+    "metrics.csv",
+    "predictions.csv",
+    "aggregate_metrics.csv",
+    "source_validation_metrics.csv",
+    "source_validation_summary.csv",
+    "source_validation_roles.json",
+    "training_logs.json",
+    "plan_locked.json",
+    "evaluation_protocol.json",
+    "expected_resource_predictions.csv"
+  ],
+  "metric_rows": 432,
+  "prediction_rows": 38016,
+  "resources_byte_identical": 0,
+  "resource_tensor_and_metadata_payloads_identical": 36,
+  "container_prefix_difference": "PyTorch ASCII filename stem versus non-ASCII Windows archive prefix; payload bytes unchanged",
+  "same_environment_only": true,
+  "independent_new_effectiveness_evidence": false
+}

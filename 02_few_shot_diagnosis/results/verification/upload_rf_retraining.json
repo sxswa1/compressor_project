@@ -1,0 +1,9 @@
+{
+  "metric_conditions_matched": 36,
+  "fixed_resource_predictions_and_scores_matched": 1056,
+  "models_retrained": 9,
+  "models_exported": 3,
+  "source_label_windows": 124,
+  "additional_observations": 0,
+  "query_fitting_rows": 0
+}

@@ -1,0 +1,15 @@
+{
+  "independently_reconstructed_windows": 520,
+  "identical_to_independently_audited_input": true,
+  "source_forward_role_checks": 12,
+  "resources_verified": 36,
+  "ensemble_resources": 9,
+  "independent_members": 3,
+  "extra_target_label_windows": 0,
+  "v1_neural_predictions_reproduced": 14256,
+  "query_backgrounds": 22,
+  "natural_fault_incidents": 0,
+  "all_target_results_exploratory": true,
+  "query_normal_reference_required": false,
+  "raw_workbook_unchanged": true
+}

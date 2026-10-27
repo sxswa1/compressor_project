@@ -1,0 +1,14 @@
+{
+  "metric_rows": 366,
+  "prediction_rows": 32208,
+  "resources_exported": 25,
+  "all_planned_conditions_completed": true,
+  "query_backgrounds": 22,
+  "unique_backgrounds": 64,
+  "natural_fault_incidents": 0,
+  "state_count_including_control": 4,
+  "semi_synthetic": true,
+  "platform_registration_tested": false,
+  "remote_pushed": false,
+  "frozen_implementation_unchanged": true
+}

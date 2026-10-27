@@ -1,0 +1,18 @@
+{
+  "training_files_byte_identical_to_successfully_retrained_snapshot": {
+    "common_algorithms/models/process_cnn.py": "1fc9cf7e399ca18165321fcf4b1e793eaf3ee65fb7932d9373c3a44d0bb32285",
+    "common_algorithms/data_processing/process_clock.py": "b5d1c64a35372050b098f1f86d77874f24ed246d0642ab04d0a94ffc8026e6b6",
+    "common_algorithms/feature_extraction/process_features.py": "efa98ee91d9a2471385fde7164a3215b89ad27b746fe670a4477a9a477d2bda1",
+    "common_algorithms/models/random_forest.py": "d69dac9c5f77ac740228b573f576916001752184020a69096e6d323c145a3799",
+    "02_few_shot_diagnosis/models/process_learning.py": "4d06dc1e2ebd0a63974e1040070db17a3a455310b20354cb9d3ebc4c4e6cdcea",
+    "02_few_shot_diagnosis/models/global_record_meta.py": "5facf238986c21e112efa159bdcd0f13796b3dd37ef4062d001653e539cd13d7",
+    "02_few_shot_diagnosis/models/rcsd_optimization.py": "b4cd3b0097ec9c1bc99e55751ad6290d9ad38b9a3534f1f945241b9df0c688ca",
+    "02_few_shot_diagnosis/pipelines/rcsd_semisynthetic.py": "dd9670a58ba2fb7e7538229019bb4be471fe15a3642c47e41f948f50fa274c17",
+    "02_few_shot_diagnosis/configs/rcsd_support_optimization_v2.json": "ab5357add755b11c03ea7cdbf58eaa0204c28200972ef6be398248ada7b7d267",
+    "02_few_shot_diagnosis/scripts/run_rcsd_optimization.py": "9e181995861474f0354d971a6e2f9b390f63b55d562dfdab2444386e49090652",
+    "02_few_shot_diagnosis/scripts/run_rcsd_seed_ensemble.py": "00369960aba4fcc96c6ab48bec5e06f57c8de753bfb1d7b17fd135c1c102debe"
+  },
+  "training_inputs_unchanged": true,
+  "inference_only_change": "General class-count support is separately covered by 274 regression checks and final archive inference replay",
+  "source_replay_proof_sha256": "e9c4704caa1f9bc34e305e99b2350024eff7d635b8c551130cd68d66f912d056"
+}
