@@ -16,3 +16,6 @@ __all__ = [
     "wavelet_features",
     "emd_features",
 ]
+
+from .process_features import process_features
+__all__.append('process_features')

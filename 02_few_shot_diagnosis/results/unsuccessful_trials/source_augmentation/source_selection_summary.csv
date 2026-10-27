@@ -1,0 +1,13 @@
+family,candidate,balanced_accuracy
+statistics,euclidean,0.7583333333333333
+statistics,diagonal_within,0.7652777777777778
+statistics,shrinkage_within,0.6923611111111111
+meta_raw,euclidean,0.8671875
+meta_raw,diagonal_within,0.8753472222222222
+meta_raw,shrinkage_within,0.9046875
+supervised_raw,euclidean,0.9631944444444445
+supervised_raw,diagonal_within,0.9621527777777779
+supervised_raw,shrinkage_within,0.9590277777777777
+transfer,head_only,0.9590277777777777
+transfer,preserve_small,0.9552083333333333
+transfer,preserve_medium,0.9387152777777777

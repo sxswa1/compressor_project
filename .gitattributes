@@ -1,0 +1,28 @@
+# Preserve the byte conventions used by frozen study SHA-256 checks.
+# Scope these rules to this research direction and its frozen shared cores.
+/02_few_shot_diagnosis/**/*.py text eol=lf
+/02_few_shot_diagnosis/**/*.mjs text eol=lf
+/common_algorithms/models/process_cnn.py text eol=lf
+/common_algorithms/feature_extraction/process_features.py text eol=lf
+/common_algorithms/models/process_statistical_prototype.py text eol=lf
+/common_algorithms/models/process_metric_prototype.py text eol=lf
+/common_algorithms/models/process_seed_ensemble.py text eol=lf
+/02_few_shot_diagnosis/configs/rcsd_optimization_v2.json text eol=lf
+/02_few_shot_diagnosis/configs/rcsd_support_optimization_v2.json text eol=lf
+/dataflow_operators/fault_diagnosis/process_metric_prototype.py text eol=crlf
+/dataflow_operators/fault_diagnosis/process_seed_ensemble.py text eol=lf
+/common_algorithms/data_processing/process_window_table.py text eol=lf
+/dataflow_operators/data_processing/process_window_table.py text eol=lf
+/02_few_shot_diagnosis/outputs/**/*.json text eol=crlf
+/02_few_shot_diagnosis/outputs/**/*.csv text eol=crlf
+/dataflow_operators/data_processing/anomaly_detection.py text eol=lf
+/dataflow_operators/data_processing/missing_value.py text eol=lf
+/dataflow_operators/data_processing/process_timeseries.py text eol=lf
+/dataflow_operators/feature_extraction/process_features.py text eol=lf
+/dataflow_operators/fault_diagnosis/process_random_forest.py text eol=lf
+/dataflow_operators/fault_diagnosis/process_cnn_diagnosis.py text eol=lf
+/dataflow_operators/fault_diagnosis/process_meta_learning.py text eol=lf
+/dataflow_operators/fault_diagnosis/process_transfer_learning.py text eol=lf
+/02_few_shot_diagnosis/results/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/02_few_shot_diagnosis/resources/**/*.pt -text
+/02_few_shot_diagnosis/resources/**/*.joblib -text

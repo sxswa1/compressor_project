@@ -1,0 +1,915 @@
+{
+  "choices": {
+    "random_forest": "original_only",
+    "cnn": "weak_three",
+    "transfer": "weak_three",
+    "meta": "weak_three"
+  },
+  "selection_data": "Only January-June public source windows; expanding chronological source training",
+  "target_query_used": false,
+  "fresh_encoders_each_fold": true,
+  "fold_roles": [
+    {
+      "fold": 0,
+      "train_seed": 42,
+      "support_seed": 11,
+      "k": 1,
+      "training_backgrounds": [
+        "B0000",
+        "B0001",
+        "B0002",
+        "B0003",
+        "B0004",
+        "B0005",
+        "B0006",
+        "B0007",
+        "B0008",
+        "B0009"
+      ],
+      "support_backgrounds": [
+        "B0017"
+      ],
+      "query_backgrounds": [
+        "B0013",
+        "B0012",
+        "B0018",
+        "B0019",
+        "B0011"
+      ]
+    },
+    {
+      "fold": 0,
+      "train_seed": 42,
+      "support_seed": 11,
+      "k": 5,
+      "training_backgrounds": [
+        "B0000",
+        "B0001",
+        "B0002",
+        "B0003",
+        "B0004",
+        "B0005",
+        "B0006",
+        "B0007",
+        "B0008",
+        "B0009"
+      ],
+      "support_backgrounds": [
+        "B0017",
+        "B0010",
+        "B0014",
+        "B0016",
+        "B0015"
+      ],
+      "query_backgrounds": [
+        "B0013",
+        "B0012",
+        "B0018",
+        "B0019",
+        "B0011"
+      ]
+    },
+    {
+      "fold": 0,
+      "train_seed": 42,
+      "support_seed": 22,
+      "k": 1,
+      "training_backgrounds": [
+        "B0000",
+        "B0001",
+        "B0002",
+        "B0003",
+        "B0004",
+        "B0005",
+        "B0006",
+        "B0007",
+        "B0008",
+        "B0009"
+      ],
+      "support_backgrounds": [
+        "B0019"
+      ],
+      "query_backgrounds": [
+        "B0010",
+        "B0014",
+        "B0013",
+        "B0018",
+        "B0016"
+      ]
+    },
+    {
+      "fold": 0,
+      "train_seed": 42,
+      "support_seed": 22,
+      "k": 5,
+      "training_backgrounds": [
+        "B0000",
+        "B0001",
+        "B0002",
+        "B0003",
+        "B0004",
+        "B0005",
+        "B0006",
+        "B0007",
+        "B0008",
+        "B0009"
+      ],
+      "support_backgrounds": [
+        "B0019",
+        "B0011",
+        "B0017",
+        "B0012",
+        "B0015"
+      ],
+      "query_backgrounds": [
+        "B0010",
+        "B0014",
+        "B0013",
+        "B0018",
+        "B0016"
+      ]
+    },
+    {
+      "fold": 0,
+      "train_seed": 43,
+      "support_seed": 11,
+      "k": 1,
+      "training_backgrounds": [
+        "B0000",
+        "B0001",
+        "B0002",
+        "B0003",
+        "B0004",
+        "B0005",
+        "B0006",
+        "B0007",
+        "B0008",
+        "B0009"
+      ],
+      "support_backgrounds": [
+        "B0017"
+      ],
+      "query_backgrounds": [
+        "B0013",
+        "B0012",
+        "B0018",
+        "B0019",
+        "B0011"
+      ]
+    },
+    {
+      "fold": 0,
+      "train_seed": 43,
+      "support_seed": 11,
+      "k": 5,
+      "training_backgrounds": [
+        "B0000",
+        "B0001",
+        "B0002",
+        "B0003",
+        "B0004",
+        "B0005",
+        "B0006",
+        "B0007",
+        "B0008",
+        "B0009"
+      ],
+      "support_backgrounds": [
+        "B0017",
+        "B0010",
+        "B0014",
+        "B0016",
+        "B0015"
+      ],
+      "query_backgrounds": [
+        "B0013",
+        "B0012",
+        "B0018",
+        "B0019",
+        "B0011"
+      ]
+    },
+    {
+      "fold": 0,
+      "train_seed": 43,
+      "support_seed": 22,
+      "k": 1,
+      "training_backgrounds": [
+        "B0000",
+        "B0001",
+        "B0002",
+        "B0003",
+        "B0004",
+        "B0005",
+        "B0006",
+        "B0007",
+        "B0008",
+        "B0009"
+      ],
+      "support_backgrounds": [
+        "B0019"
+      ],
+      "query_backgrounds": [
+        "B0010",
+        "B0014",
+        "B0013",
+        "B0018",
+        "B0016"
+      ]
+    },
+    {
+      "fold": 0,
+      "train_seed": 43,
+      "support_seed": 22,
+      "k": 5,
+      "training_backgrounds": [
+        "B0000",
+        "B0001",
+        "B0002",
+        "B0003",
+        "B0004",
+        "B0005",
+        "B0006",
+        "B0007",
+        "B0008",
+        "B0009"
+      ],
+      "support_backgrounds": [
+        "B0019",
+        "B0011",
+        "B0017",
+        "B0012",
+        "B0015"
+      ],
+      "query_backgrounds": [
+        "B0010",
+        "B0014",
+        "B0013",
+        "B0018",
+        "B0016"
+      ]
+    },
+    {
+      "fold": 1,
+      "train_seed": 42,
+      "support_seed": 11,
+      "k": 1,
+      "training_backgrounds": [
+        "B0000",
+        "B0001",
+        "B0002",
+        "B0003",
+        "B0004",
+        "B0005",
+        "B0006",
+        "B0007",
+        "B0008",
+        "B0009",
+        "B0010",
+        "B0011",
+        "B0012",
+        "B0013",
+        "B0014",
+        "B0015",
+        "B0016",
+        "B0017"
+      ],
+      "support_backgrounds": [
+        "B0025"
+      ],
+      "query_backgrounds": [
+        "B0028",
+        "B0018",
+        "B0023",
+        "B0027",
+        "B0019",
+        "B0020",
+        "B0024",
+        "B0021"
+      ]
+    },
+    {
+      "fold": 1,
+      "train_seed": 42,
+      "support_seed": 11,
+      "k": 5,
+      "training_backgrounds": [
+        "B0000",
+        "B0001",
+        "B0002",
+        "B0003",
+        "B0004",
+        "B0005",
+        "B0006",
+        "B0007",
+        "B0008",
+        "B0009",
+        "B0010",
+        "B0011",
+        "B0012",
+        "B0013",
+        "B0014",
+        "B0015",
+        "B0016",
+        "B0017"
+      ],
+      "support_backgrounds": [
+        "B0025",
+        "B0022",
+        "B0029",
+        "B0026",
+        "B0030"
+      ],
+      "query_backgrounds": [
+        "B0028",
+        "B0018",
+        "B0023",
+        "B0027",
+        "B0019",
+        "B0020",
+        "B0024",
+        "B0021"
+      ]
+    },
+    {
+      "fold": 1,
+      "train_seed": 42,
+      "support_seed": 22,
+      "k": 1,
+      "training_backgrounds": [
+        "B0000",
+        "B0001",
+        "B0002",
+        "B0003",
+        "B0004",
+        "B0005",
+        "B0006",
+        "B0007",
+        "B0008",
+        "B0009",
+        "B0010",
+        "B0011",
+        "B0012",
+        "B0013",
+        "B0014",
+        "B0015",
+        "B0016",
+        "B0017"
+      ],
+      "support_backgrounds": [
+        "B0029"
+      ],
+      "query_backgrounds": [
+        "B0023",
+        "B0018",
+        "B0020",
+        "B0027",
+        "B0028",
+        "B0026",
+        "B0022",
+        "B0024"
+      ]
+    },
+    {
+      "fold": 1,
+      "train_seed": 42,
+      "support_seed": 22,
+      "k": 5,
+      "training_backgrounds": [
+        "B0000",
+        "B0001",
+        "B0002",
+        "B0003",
+        "B0004",
+        "B0005",
+        "B0006",
+        "B0007",
+        "B0008",
+        "B0009",
+        "B0010",
+        "B0011",
+        "B0012",
+        "B0013",
+        "B0014",
+        "B0015",
+        "B0016",
+        "B0017"
+      ],
+      "support_backgrounds": [
+        "B0029",
+        "B0021",
+        "B0019",
+        "B0025",
+        "B0030"
+      ],
+      "query_backgrounds": [
+        "B0023",
+        "B0018",
+        "B0020",
+        "B0027",
+        "B0028",
+        "B0026",
+        "B0022",
+        "B0024"
+      ]
+    },
+    {
+      "fold": 1,
+      "train_seed": 43,
+      "support_seed": 11,
+      "k": 1,
+      "training_backgrounds": [
+        "B0000",
+        "B0001",
+        "B0002",
+        "B0003",
+        "B0004",
+        "B0005",
+        "B0006",
+        "B0007",
+        "B0008",
+        "B0009",
+        "B0010",
+        "B0011",
+        "B0012",
+        "B0013",
+        "B0014",
+        "B0015",
+        "B0016",
+        "B0017"
+      ],
+      "support_backgrounds": [
+        "B0025"
+      ],
+      "query_backgrounds": [
+        "B0028",
+        "B0018",
+        "B0023",
+        "B0027",
+        "B0019",
+        "B0020",
+        "B0024",
+        "B0021"
+      ]
+    },
+    {
+      "fold": 1,
+      "train_seed": 43,
+      "support_seed": 11,
+      "k": 5,
+      "training_backgrounds": [
+        "B0000",
+        "B0001",
+        "B0002",
+        "B0003",
+        "B0004",
+        "B0005",
+        "B0006",
+        "B0007",
+        "B0008",
+        "B0009",
+        "B0010",
+        "B0011",
+        "B0012",
+        "B0013",
+        "B0014",
+        "B0015",
+        "B0016",
+        "B0017"
+      ],
+      "support_backgrounds": [
+        "B0025",
+        "B0022",
+        "B0029",
+        "B0026",
+        "B0030"
+      ],
+      "query_backgrounds": [
+        "B0028",
+        "B0018",
+        "B0023",
+        "B0027",
+        "B0019",
+        "B0020",
+        "B0024",
+        "B0021"
+      ]
+    },
+    {
+      "fold": 1,
+      "train_seed": 43,
+      "support_seed": 22,
+      "k": 1,
+      "training_backgrounds": [
+        "B0000",
+        "B0001",
+        "B0002",
+        "B0003",
+        "B0004",
+        "B0005",
+        "B0006",
+        "B0007",
+        "B0008",
+        "B0009",
+        "B0010",
+        "B0011",
+        "B0012",
+        "B0013",
+        "B0014",
+        "B0015",
+        "B0016",
+        "B0017"
+      ],
+      "support_backgrounds": [
+        "B0029"
+      ],
+      "query_backgrounds": [
+        "B0023",
+        "B0018",
+        "B0020",
+        "B0027",
+        "B0028",
+        "B0026",
+        "B0022",
+        "B0024"
+      ]
+    },
+    {
+      "fold": 1,
+      "train_seed": 43,
+      "support_seed": 22,
+      "k": 5,
+      "training_backgrounds": [
+        "B0000",
+        "B0001",
+        "B0002",
+        "B0003",
+        "B0004",
+        "B0005",
+        "B0006",
+        "B0007",
+        "B0008",
+        "B0009",
+        "B0010",
+        "B0011",
+        "B0012",
+        "B0013",
+        "B0014",
+        "B0015",
+        "B0016",
+        "B0017"
+      ],
+      "support_backgrounds": [
+        "B0029",
+        "B0021",
+        "B0019",
+        "B0025",
+        "B0030"
+      ],
+      "query_backgrounds": [
+        "B0023",
+        "B0018",
+        "B0020",
+        "B0027",
+        "B0028",
+        "B0026",
+        "B0022",
+        "B0024"
+      ]
+    },
+    {
+      "fold": 2,
+      "train_seed": 42,
+      "support_seed": 11,
+      "k": 1,
+      "training_backgrounds": [
+        "B0000",
+        "B0001",
+        "B0002",
+        "B0003",
+        "B0004",
+        "B0005",
+        "B0006",
+        "B0007",
+        "B0008",
+        "B0009",
+        "B0010",
+        "B0011",
+        "B0012",
+        "B0013",
+        "B0014",
+        "B0015",
+        "B0016",
+        "B0017",
+        "B0018",
+        "B0019",
+        "B0020",
+        "B0021",
+        "B0022"
+      ],
+      "support_backgrounds": [
+        "B0024"
+      ],
+      "query_backgrounds": [
+        "B0028",
+        "B0023",
+        "B0030"
+      ]
+    },
+    {
+      "fold": 2,
+      "train_seed": 42,
+      "support_seed": 11,
+      "k": 5,
+      "training_backgrounds": [
+        "B0000",
+        "B0001",
+        "B0002",
+        "B0003",
+        "B0004",
+        "B0005",
+        "B0006",
+        "B0007",
+        "B0008",
+        "B0009",
+        "B0010",
+        "B0011",
+        "B0012",
+        "B0013",
+        "B0014",
+        "B0015",
+        "B0016",
+        "B0017",
+        "B0018",
+        "B0019",
+        "B0020",
+        "B0021",
+        "B0022"
+      ],
+      "support_backgrounds": [
+        "B0024",
+        "B0025",
+        "B0027",
+        "B0029",
+        "B0026"
+      ],
+      "query_backgrounds": [
+        "B0028",
+        "B0023",
+        "B0030"
+      ]
+    },
+    {
+      "fold": 2,
+      "train_seed": 42,
+      "support_seed": 22,
+      "k": 1,
+      "training_backgrounds": [
+        "B0000",
+        "B0001",
+        "B0002",
+        "B0003",
+        "B0004",
+        "B0005",
+        "B0006",
+        "B0007",
+        "B0008",
+        "B0009",
+        "B0010",
+        "B0011",
+        "B0012",
+        "B0013",
+        "B0014",
+        "B0015",
+        "B0016",
+        "B0017",
+        "B0018",
+        "B0019",
+        "B0020",
+        "B0021",
+        "B0022"
+      ],
+      "support_backgrounds": [
+        "B0029"
+      ],
+      "query_backgrounds": [
+        "B0030",
+        "B0028",
+        "B0026"
+      ]
+    },
+    {
+      "fold": 2,
+      "train_seed": 42,
+      "support_seed": 22,
+      "k": 5,
+      "training_backgrounds": [
+        "B0000",
+        "B0001",
+        "B0002",
+        "B0003",
+        "B0004",
+        "B0005",
+        "B0006",
+        "B0007",
+        "B0008",
+        "B0009",
+        "B0010",
+        "B0011",
+        "B0012",
+        "B0013",
+        "B0014",
+        "B0015",
+        "B0016",
+        "B0017",
+        "B0018",
+        "B0019",
+        "B0020",
+        "B0021",
+        "B0022"
+      ],
+      "support_backgrounds": [
+        "B0029",
+        "B0027",
+        "B0025",
+        "B0024",
+        "B0023"
+      ],
+      "query_backgrounds": [
+        "B0030",
+        "B0028",
+        "B0026"
+      ]
+    },
+    {
+      "fold": 2,
+      "train_seed": 43,
+      "support_seed": 11,
+      "k": 1,
+      "training_backgrounds": [
+        "B0000",
+        "B0001",
+        "B0002",
+        "B0003",
+        "B0004",
+        "B0005",
+        "B0006",
+        "B0007",
+        "B0008",
+        "B0009",
+        "B0010",
+        "B0011",
+        "B0012",
+        "B0013",
+        "B0014",
+        "B0015",
+        "B0016",
+        "B0017",
+        "B0018",
+        "B0019",
+        "B0020",
+        "B0021",
+        "B0022"
+      ],
+      "support_backgrounds": [
+        "B0024"
+      ],
+      "query_backgrounds": [
+        "B0028",
+        "B0023",
+        "B0030"
+      ]
+    },
+    {
+      "fold": 2,
+      "train_seed": 43,
+      "support_seed": 11,
+      "k": 5,
+      "training_backgrounds": [
+        "B0000",
+        "B0001",
+        "B0002",
+        "B0003",
+        "B0004",
+        "B0005",
+        "B0006",
+        "B0007",
+        "B0008",
+        "B0009",
+        "B0010",
+        "B0011",
+        "B0012",
+        "B0013",
+        "B0014",
+        "B0015",
+        "B0016",
+        "B0017",
+        "B0018",
+        "B0019",
+        "B0020",
+        "B0021",
+        "B0022"
+      ],
+      "support_backgrounds": [
+        "B0024",
+        "B0025",
+        "B0027",
+        "B0029",
+        "B0026"
+      ],
+      "query_backgrounds": [
+        "B0028",
+        "B0023",
+        "B0030"
+      ]
+    },
+    {
+      "fold": 2,
+      "train_seed": 43,
+      "support_seed": 22,
+      "k": 1,
+      "training_backgrounds": [
+        "B0000",
+        "B0001",
+        "B0002",
+        "B0003",
+        "B0004",
+        "B0005",
+        "B0006",
+        "B0007",
+        "B0008",
+        "B0009",
+        "B0010",
+        "B0011",
+        "B0012",
+        "B0013",
+        "B0014",
+        "B0015",
+        "B0016",
+        "B0017",
+        "B0018",
+        "B0019",
+        "B0020",
+        "B0021",
+        "B0022"
+      ],
+      "support_backgrounds": [
+        "B0029"
+      ],
+      "query_backgrounds": [
+        "B0030",
+        "B0028",
+        "B0026"
+      ]
+    },
+    {
+      "fold": 2,
+      "train_seed": 43,
+      "support_seed": 22,
+      "k": 5,
+      "training_backgrounds": [
+        "B0000",
+        "B0001",
+        "B0002",
+        "B0003",
+        "B0004",
+        "B0005",
+        "B0006",
+        "B0007",
+        "B0008",
+        "B0009",
+        "B0010",
+        "B0011",
+        "B0012",
+        "B0013",
+        "B0014",
+        "B0015",
+        "B0016",
+        "B0017",
+        "B0018",
+        "B0019",
+        "B0020",
+        "B0021",
+        "B0022"
+      ],
+      "support_backgrounds": [
+        "B0029",
+        "B0027",
+        "B0025",
+        "B0024",
+        "B0023"
+      ],
+      "query_backgrounds": [
+        "B0030",
+        "B0028",
+        "B0026"
+      ]
+    }
+  ],
+  "metric_rows": 504,
+  "config_sha256": "ab5357add755b11c03ea7cdbf58eaa0204c28200972ef6be398248ada7b7d267",
+  "runner_sha256": "8121dc65d7bf37ee357c3fadc0b3db62108d4112c86f0f83b8c859aa41f63686",
+  "augmentation_code_sha256": "b4cd3b0097ec9c1bc99e55751ad6290d9ad38b9a3534f1f945241b9df0c688ca",
+  "objective": "Equal mean accuracy across forward source-period tasks, main and half-amplitude validation queries, K1 and K5; select augmentation separately for each method",
+  "target_confirmation_is_independent": false
+}

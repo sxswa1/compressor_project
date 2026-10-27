@@ -1,0 +1,14 @@
+{
+  "metric_rows": 720,
+  "prediction_rows": 63360,
+  "resources_exported": 24,
+  "source_backgrounds": 31,
+  "support_pool_backgrounds": 11,
+  "query_backgrounds": 22,
+  "natural_fault_incidents": 0,
+  "semi_synthetic": true,
+  "target_results": "exploratory",
+  "query_pairing_at_inference": false,
+  "platform_registered": false,
+  "remote_pushed": false
+}

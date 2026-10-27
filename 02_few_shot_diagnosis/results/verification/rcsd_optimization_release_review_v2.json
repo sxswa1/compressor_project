@@ -1,0 +1,32 @@
+{
+  "version": "RCSD diagnosis optimization v2",
+  "archive_filename": "凌晨_RCSD小样本诊断优化交付_v2.zip",
+  "archive_bytes": 4053309,
+  "archive_sha256": "db57d16879654b4b0bba1b57ac9f74cf61d6d407c878a920080aecdeaa82e400",
+  "regression_passed": 274,
+  "standalone_operators": 9,
+  "resources": 39,
+  "inference_predictions_matched": 13728,
+  "empty_inputs_checked": 39,
+  "wrong_cadences_rejected": 39,
+  "full_retraining_metric_rows_reproduced": 432,
+  "full_retraining_predictions_reproduced": 38016,
+  "full_retraining_model_payloads_identical": 36,
+  "v1_neural_predictions_reproduced": 14256,
+  "source_training_original_backgrounds": 31,
+  "target_support_pool_backgrounds": 11,
+  "query_nonoverlapping_backgrounds": 22,
+  "original_workbook_unchanged": true,
+  "v1_archive_unchanged": true,
+  "target_evaluation": "exploratory_after_inspected_v1",
+  "real_fault_incidents": 0,
+  "field_validation_completed": false,
+  "platform_registered": false,
+  "remote_pushed": false,
+  "known_limitations": [
+    "Synthetic class templates, centrifugal public source, no confirmed natural fault labels",
+    "Three-seed ensemble uses the same support labels with approximately three times neural computation",
+    "Meta-learning K5 gain is small and uncertain; K10 main can decline",
+    "Very weak response accuracy remains low; transfer still does not beat the matched scratch ensemble"
+  ]
+}

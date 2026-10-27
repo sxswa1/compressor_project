@@ -1,0 +1,7 @@
+method,accuracy
+cnn_scratch,0.8547743055555556
+cnn_scratch_seed_ensemble,0.8612847222222223
+meta_adapted_prototype,0.8715856481481482
+meta_adapted_prototype_seed_ensemble,0.8692708333333333
+transfer,0.872193287037037
+transfer_seed_ensemble,0.87265625

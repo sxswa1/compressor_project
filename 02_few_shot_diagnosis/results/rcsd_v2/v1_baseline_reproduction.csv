@@ -1,0 +1,4 @@
+method,matched_predictions,identical_classes,max_score_difference
+cnn_scratch,4752,True,0.0
+transfer,4752,True,0.0
+meta_adapted_prototype,4752,True,0.0

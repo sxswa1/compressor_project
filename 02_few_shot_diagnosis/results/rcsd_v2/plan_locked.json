@@ -1,0 +1,94 @@
+{
+  "version": "rcsd-equal-seed-ensemble-v2",
+  "scope": "Exploratory optimization after inspected v1 and an unsuccessful source-augmentation trial",
+  "source_forward_folds": [
+    {
+      "train_end": 10,
+      "validation_end": 20
+    },
+    {
+      "train_end": 18,
+      "validation_end": 31
+    },
+    {
+      "train_end": 23,
+      "validation_end": 31
+    }
+  ],
+  "selection_train_seeds": [
+    42,
+    43
+  ],
+  "selection_support_seeds": [
+    11,
+    22
+  ],
+  "selection_k": [
+    1,
+    5
+  ],
+  "augmentation_candidates": {
+    "original_only": [
+      1.0
+    ],
+    "weak_three": [
+      0.35,
+      0.65,
+      1.0
+    ],
+    "weak_five": [
+      0.2,
+      0.4,
+      0.6,
+      0.8,
+      1.0
+    ]
+  },
+  "source_steps": 250,
+  "meta_episodes": 350,
+  "target_steps": 250,
+  "learning_rate": 0.002,
+  "episode_support": 2,
+  "episode_query": 3,
+  "forest_trees": 150,
+  "final_train_seeds": [
+    42,
+    43,
+    44
+  ],
+  "final_support_seeds": [
+    11,
+    22,
+    33
+  ],
+  "final_k": [
+    1,
+    5,
+    10
+  ],
+  "delivery_choice": {
+    "method": "meta_support_augmented",
+    "k": 5,
+    "train_seed": 42,
+    "support_seed": 11
+  },
+  "assumption": "Labelled supports contain paired unmodified/modified windows from each known construction background. Such pairs must not be assumed to exist in future natural field failures.",
+  "query_reference_required": false,
+  "source_selection_objective": "Equal mean accuracy across forward source-period tasks, main and half-amplitude validation queries, K1 and K5; select augmentation separately for each method",
+  "target_results_are_independent_confirmation": false,
+  "augmentation_levels": [
+    1.0
+  ],
+  "ensemble_weights": [
+    0.3333333333333333,
+    0.3333333333333333,
+    0.3333333333333333
+  ],
+  "default_delivery": {
+    "method": "meta_adapted_prototype_seed_ensemble",
+    "k": 5,
+    "support_seed": 11
+  },
+  "runner_sha256": "00369960aba4fcc96c6ab48bec5e06f57c8de753bfb1d7b17fd135c1c102debe",
+  "helper_sha256": "9e181995861474f0354d971a6e2f9b390f63b55d562dfdab2444386e49090652"
+}

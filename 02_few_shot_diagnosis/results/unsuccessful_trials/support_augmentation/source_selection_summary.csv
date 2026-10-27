@@ -1,0 +1,13 @@
+method,candidate,balanced_accuracy
+random_forest,original_only,0.8215277777777777
+random_forest,weak_three,0.8045138888888889
+random_forest,weak_five,0.7730902777777778
+cnn,original_only,0.8468749999999999
+cnn,weak_three,0.9037760416666667
+cnn,weak_five,0.8733940972222222
+transfer,original_only,0.8790364583333333
+transfer,weak_three,0.9334635416666667
+transfer,weak_five,0.9016927083333334
+meta,original_only,0.8727430555555555
+meta,weak_three,0.9367187499999999
+meta,weak_five,0.9075954861111111

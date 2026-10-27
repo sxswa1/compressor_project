@@ -1,0 +1,157 @@
+{
+  "signal_type": "multivariate_process",
+  "interval_seconds": 900.0,
+  "window_points": 20,
+  "channels": [
+    {
+      "name": "75ZI800BA.pv",
+      "quantity": "axial",
+      "unit": "mm",
+      "aggregation": "mean"
+    },
+    {
+      "name": "75ZI800BB.pv",
+      "quantity": "axial",
+      "unit": "mm",
+      "aggregation": "mean"
+    },
+    {
+      "name": "75ZI801BA.pv",
+      "quantity": "axial",
+      "unit": "mm",
+      "aggregation": "mean"
+    },
+    {
+      "name": "75ZI801BB.pv",
+      "quantity": "axial",
+      "unit": "mm",
+      "aggregation": "mean"
+    },
+    {
+      "name": "75PI808.pv",
+      "quantity": "pressure",
+      "unit": "kg/cm2 (as reported)",
+      "aggregation": "minimum"
+    },
+    {
+      "name": "75PI823.pv",
+      "quantity": "pressure",
+      "unit": "kg/cm2 (as reported)",
+      "aggregation": "minimum"
+    },
+    {
+      "name": "75PI870.pv",
+      "quantity": "pressure",
+      "unit": "kg/cm2 (as reported)",
+      "aggregation": "minimum"
+    },
+    {
+      "name": "75PI845.pv",
+      "quantity": "pressure",
+      "unit": "kg/cm2 (as reported)",
+      "aggregation": "minimum"
+    },
+    {
+      "name": "75PDI853.pv",
+      "quantity": "differential_pressure",
+      "unit": "kg/cm2 (as reported)",
+      "aggregation": "minimum"
+    },
+    {
+      "name": "75TI821.pv",
+      "quantity": "temperature",
+      "unit": "degC",
+      "aggregation": "maximum"
+    },
+    {
+      "name": "75TI822.pv",
+      "quantity": "temperature",
+      "unit": "degC",
+      "aggregation": "maximum"
+    },
+    {
+      "name": "75TI827.pv",
+      "quantity": "temperature",
+      "unit": "degC",
+      "aggregation": "maximum"
+    },
+    {
+      "name": "75TI828.pv",
+      "quantity": "temperature",
+      "unit": "degC",
+      "aggregation": "maximum"
+    },
+    {
+      "name": "75TI824.pv",
+      "quantity": "temperature",
+      "unit": "degC",
+      "aggregation": "maximum"
+    },
+    {
+      "name": "75TI829.pv",
+      "quantity": "temperature",
+      "unit": "degC",
+      "aggregation": "maximum"
+    },
+    {
+      "name": "75TI830.pv",
+      "quantity": "temperature",
+      "unit": "degC",
+      "aggregation": "maximum"
+    },
+    {
+      "name": "75TI831.pv",
+      "quantity": "temperature",
+      "unit": "degC",
+      "aggregation": "maximum"
+    },
+    {
+      "name": "75TI832.pv",
+      "quantity": "temperature",
+      "unit": "degC",
+      "aggregation": "maximum"
+    },
+    {
+      "name": "75TI836.pv",
+      "quantity": "temperature",
+      "unit": "degC",
+      "aggregation": "maximum"
+    },
+    {
+      "name": "75TI834.pv",
+      "quantity": "temperature",
+      "unit": "degC",
+      "aggregation": "maximum"
+    },
+    {
+      "name": "75XI821BX.pv",
+      "quantity": "vibration",
+      "unit": "um",
+      "aggregation": "maximum"
+    },
+    {
+      "name": "75XI822BY.pv",
+      "quantity": "vibration",
+      "unit": "um",
+      "aggregation": "maximum"
+    },
+    {
+      "name": "75XI823BX.pv",
+      "quantity": "vibration",
+      "unit": "um",
+      "aggregation": "maximum"
+    },
+    {
+      "name": "75XI824BX.pv",
+      "quantity": "vibration",
+      "unit": "um",
+      "aggregation": "maximum"
+    },
+    {
+      "name": "75SI865R.pv",
+      "quantity": "speed",
+      "unit": "rpm",
+      "aggregation": "mean"
+    }
+  ]
+}

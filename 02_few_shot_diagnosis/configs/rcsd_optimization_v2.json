@@ -1,0 +1,40 @@
+{
+  "version": "rcsd-optimization-v2",
+  "scope": "source-background-selected optimization; all old target-query results are exploratory because v1 queries were already inspected",
+  "source_folds": 3,
+  "selection_train_seeds": [42, 43],
+  "selection_support_seeds": [11, 22],
+  "selection_k": [1, 5],
+  "selection_metric": "mean balanced accuracy of main and half-amplitude source-validation queries, paired background roles",
+  "source_augmentation_levels": [0.35, 0.65, 1.0],
+  "metric_candidates": ["euclidean", "diagonal_within", "shrinkage_within"],
+  "representations": ["statistics", "meta_raw", "supervised_raw"],
+  "covariance_ridge": 0.05,
+  "transfer_candidates": [
+    {"name": "head_only", "encoder_lr": 0.0, "head_lr": 0.002, "anchor": 0.0},
+    {"name": "preserve_small", "encoder_lr": 0.0002, "head_lr": 0.002, "anchor": 0.001},
+    {"name": "preserve_medium", "encoder_lr": 0.001, "head_lr": 0.002, "anchor": 0.001}
+  ],
+  "source_steps": 250,
+  "meta_episodes": 350,
+  "target_steps": 250,
+  "label_smoothing": 0.05,
+  "episode_support": 2,
+  "episode_query": 3,
+  "learning_rate": 0.002,
+  "final_train_seeds": [42, 43, 44],
+  "final_support_seeds": [11, 22, 33],
+  "final_k": [1, 5, 10],
+  "extra_stress_variants": {
+    "very_weak_long_lag": {"amplitude_multiplier": 0.25, "response_power": 1.8, "lag_points": 24},
+    "mid_amplitude_long_lag": {"amplitude_multiplier": 0.75, "response_power": 1.8, "lag_points": 24}
+  },
+  "delivery_choice": {"method": "meta_metric_selected", "k": 5, "train_seed": 42, "support_seed": 11},
+  "notes": [
+    "No old models are used for source cross-validation: each fold is trained from scratch on allowed source backgrounds.",
+    "Weak source augmentation uses only labelled source pairs and unmodified source controls; no target-query controls are used for fitting.",
+    "The optimized transfer assumes identical known class meanings in source and target; not a novel-class method.",
+    "Extra stress variants share the same 22 target backgrounds; they are new generated responses, not new independent devices or failures.",
+    "V1 data, results, code and delivery archives are retained unchanged."
+  ]
+}
