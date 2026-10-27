@@ -1,0 +1,11 @@
+{
+  "legacy_entries_preserved": 10,
+  "legacy_operator_sources_unchanged": true,
+  "legacy_package_operator_count": 10,
+  "gaohy_registered_operators": [
+    "gradient_boosting_regression",
+    "lstm_regression",
+    "compressor_early_warning",
+    "compressor_risk_quantification"
+  ]
+}

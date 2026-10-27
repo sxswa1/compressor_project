@@ -26,7 +26,7 @@ def main():
              "02_few_shot_diagnosis/scripts/run_rcsd_demo.py",
              "02_few_shot_diagnosis/requirements.txt", "tools/verify_rcsd_handover.py",
              "docs/凌晨/算子说明.md", "docs/凌晨/测试报告.md"]
-    files += ["dataflow_operators/" + value["path"] for value in namespace["OPERATORS"].values()]
+    files += ["dataflow_operators/" + value["path"] for value in namespace["LINGCHEN_OPERATORS"].values()]
     resource = ROOT / "02_few_shot_diagnosis/resources/rcsd_v2"
     files += [path.relative_to(ROOT).as_posix() for path in resource.rglob("*") if path.is_file()]
     files += ["02_few_shot_diagnosis/results/verification/" + name for name in

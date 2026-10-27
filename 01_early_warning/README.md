@@ -53,6 +53,8 @@ python 01_early_warning/scripts/predict_research.py --input input.csv --output p
 
 ## DataFlow 算子
 
+算子目录同时登记了公共 [LSTM 和梯度提升回归入口](../common_algorithms/models/README.md#dataflow-独立回归算子)，供单独调用基础模型。它们与下面两个业务算子分别登记在 `dataflow_operators/registry.py`。
+
 两个自包含算子位于 `dataflow_operators/health_assessment/`：
 
 - `compressor_early_warning.py`：EWMA 预警。

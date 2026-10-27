@@ -1,8 +1,8 @@
-"""凌晨负责的过程数据算子目录登记；不是平台数据库注册或算子卡片。
+"""仓库算子目录登记；不是平台数据库注册或算子卡片。
 
 算法源码按《新算法接入与算子封装规范》交给维护方后，由平台生成卡片、
 写入on_run并联调。此清单只供仓库检索、构建和本地契约检查，不导入算法依赖。
-其他同学已有算子路径不变，本清单不接管其登记方式。
+按各自的输入输出契约登记；默认双端口只适用于原有过程诊断算子。
 """
 
 OPERATORS = {
@@ -48,5 +48,41 @@ OPERATORS = {
     },
 }
 
+# 保留凌晨的交付集合，原有构建和验证不包含其他人的算子。
+for entry in OPERATORS.values():
+    entry.setdefault("owner", "凌晨")
+    entry.setdefault("input_ports", ["df"])
+    entry.setdefault("output_ports", {"out_1": "pd.DataFrame", "out_2": "pd.DataFrame"})
+LINGCHEN_OPERATORS = dict(OPERATORS)
+
+GAOHY_OPERATORS = {
+    "gradient_boosting_regression": {
+        "path": "predictive_analysis/gradient_boosting_regression.py", "model_required": True,
+        "owner": "高淏宇", "description": "梯度提升特征表单目标回归",
+        "requirements": ["numpy", "pandas", "scikit-learn"],
+        "input_ports": ["df"], "output_ports": {"out_1": "pd.DataFrame"},
+    },
+    "lstm_regression": {
+        "path": "predictive_analysis/lstm_regression.py", "model_required": True,
+        "owner": "高淏宇", "description": "LSTM 历史窗口单目标回归",
+        "requirements": ["numpy", "pandas", "torch"],
+        "input_ports": ["df"], "output_ports": {"out_1": "pd.DataFrame"},
+    },
+    "compressor_early_warning": {
+        "path": "health_assessment/compressor_early_warning.py", "model_required": True,
+        "owner": "高淏宇", "description": "EWMA 压缩机超前预警",
+        "requirements": ["numpy", "pandas", "scikit-learn"],
+        "input_ports": ["df"], "output_ports": {"out_1": "pd.DataFrame"},
+    },
+    "compressor_risk_quantification": {
+        "path": "health_assessment/compressor_risk_quantification.py", "model_required": True,
+        "owner": "高淏宇", "description": "DI、四级风险、RUL 及区间",
+        "requirements": ["numpy", "pandas", "scikit-learn", "torch"],
+        "input_ports": ["df"], "output_ports": {"out_1": "pd.DataFrame"},
+    },
+}
+OPERATORS.update(GAOHY_OPERATORS)
+
 INPUT_PORTS = ["df"]
+# 旧过程诊断接口的兼容默认值；实际端口以每个条目的 output_ports 为准。
 OUTPUT_PORTS = {"out_1": "pd.DataFrame", "out_2": "pd.DataFrame"}
