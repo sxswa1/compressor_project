@@ -46,7 +46,7 @@ def main():
     torch.set_num_threads(2)
     namespace = {}
     exec((ROOT / "dataflow_operators/registry.py").read_text(encoding="utf-8"), namespace)
-    registry = namespace["OPERATORS"]
+    registry = namespace["LINGCHEN_OPERATORS"]
     if len(registry) != 10:
         raise AssertionError("Incomplete operator directory registration")
     operators = {}

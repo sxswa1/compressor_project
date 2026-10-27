@@ -5,6 +5,7 @@ import hashlib
 import json
 import pickle
 import shutil
+import torch
 
 
 def export_models(root, output):
@@ -15,6 +16,7 @@ def export_models(root, output):
     source = root/'warning_lstm_budget_v1/results/bundle.pkl'
     meta_path = fit/'results/preprocessing.json'
     files = {'preprocessing.json': meta_path,
+             'gradient_boosting_di.pkl': fit/'models/di/gradient_boosting_history__20261024.pkl',
              'reference.pkl': fit/'models/rul/reference.pkl',
              'interval_radii.json': fit/'models/rul/interval_radii.json'}
     for seed in [20261023, 20261024, 20261025]:
@@ -39,6 +41,29 @@ def export_models(root, output):
     with (output/'warning.pkl').open('wb') as stream:
         pickle.dump(warning, stream, protocol=5)
     digest = lambda p: hashlib.sha256(p.read_bytes()).hexdigest()
+    meta = json.loads(meta_path.read_text(encoding='utf-8'))
+    units = {}
+    for sensor in meta['sensors']:
+        units[sensor] = ('rpm' if 'SI' in sensor else 'degC' if 'TI' in sensor else
+                         'mm' if 'ZI' in sensor else 'um' if 'XI' in sensor else 'kg/cm2')
+    for seed in [20261023,20261024,20261025]:
+        model_path = output/f'di_{seed}.pt'
+        payload = torch.load(model_path, map_location='cpu', weights_only=True)
+        if (payload['window'],payload['features']) != (meta['history_points'],len(meta['sensors'])):
+            raise ValueError('LSTM 权重与预处理描述不匹配')
+        schema = dict(model_sha256=digest(model_path), feature_columns=meta['sensors'],
+            feature_units=units, window_points=meta['history_points'], sampling_minutes=meta['sampling_minutes'],
+            target_name='DI_raw', target_unit='dimensionless', running_column='75SI865R.pv',
+            running_bounds=meta['running_speed_range'])
+        (output/f'di_{seed}.schema.json').write_text(json.dumps(schema,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    feature_names = [f'{recipe}__{sensor}' for recipe in meta['feature_order'] for sensor in meta['sensors']]
+    feature_units = {f'{recipe}__{sensor}': units[sensor] for recipe in meta['feature_order'] for sensor in meta['sensors']}
+    schema = dict(model_sha256=digest(output/'gradient_boosting_di.pkl'), feature_columns=feature_names,
+        feature_units=feature_units, target_name='DI_raw', target_unit='dimensionless',
+        feature_recipe='RCSD raw 96-point window, pipelines.baseline_data.tabular_features; float32 inputs',
+        recipe_order=meta['feature_order'], sensors=meta['sensors'], window_points=96, sampling_minutes=15,
+        running_column='75SI865R.pv', running_bounds=meta['running_speed_range'])
+    (output/'gradient_boosting_di.schema.json').write_text(json.dumps(schema,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     manifest = dict(format='rcsd_dataflow_models_v1', speed_column='75SI865R.pv',
         seeds=[20261023, 20261024, 20261025],
         methods={'warning': 'change_ewma', 'di': 'lstm_window', 'rul': 'trees_history__residual_augmented'},

@@ -1,8 +1,28 @@
 # DataFlow 算子目录
 
-以下为凌晨负责的小样本过程诊断算子，登记源为 [registry.py](registry.py)。它是仓库目录清单，不是平台数据库注册结果。其他同学的已有算子保留原路径。
+登记源为 [registry.py](registry.py)，包含凌晨的小样本过程诊断算子，以及高淏宇的公共回归、预警与风险量化算子。它是仓库目录清单，不是平台数据库注册结果。每项记录负责人、源码路径、依赖和输入输出端口。
 
-每个文件为 UTF-8，自包含算法及顶层 `execute(df, 显式业务参数, **kwargs)`，统一返回 `{"out_1": result_df, "out_2": info_df}`。输出值均为 `pd.DataFrame`，空表保持输出列结构，非法输入抛出异常。依赖须预先安装；模型由部署环境显式挂载。
+每个文件为 UTF-8，自包含算法及顶层 `execute(df, 显式业务参数, **kwargs)`。输出端口以各条目的 `output_ports` 为准，值均为 `pd.DataFrame`。空表按入口约定返回有结构空表或抛出异常。依赖须预先安装；模型由部署环境显式挂载。
+
+## 高淏宇
+
+以下四个算子均返回 `{"out_1": result_df}`。
+
+| 算子名 | 单文件源码 | 功能 | 模型资源 |
+|---|---|---|---|
+| lstm_regression | [predictive_analysis/lstm_regression.py](predictive_analysis/lstm_regression.py) | 历史窗口单目标回归 | .pt 权重及配套 schema.json |
+| gradient_boosting_regression | [predictive_analysis/gradient_boosting_regression.py](predictive_analysis/gradient_boosting_regression.py) | 数值特征表单目标回归 | .pkl 权重及配套 schema.json |
+| compressor_early_warning | [health_assessment/compressor_early_warning.py](health_assessment/compressor_early_warning.py) | EWMA 预警 | warning.pkl |
+| compressor_risk_quantification | [health_assessment/compressor_risk_quantification.py](health_assessment/compressor_risk_quantification.py) | DI、四级风险、RUL 及区间 | 导出的模型目录 |
+
+LSTM 和梯度提升均调用已训练的回归模型。配套 schema 是权重的输入描述，记录特征顺序、单位和文件哈希，不是平台算子卡片。模型导出和调用示例见[公共回归模型](../common_algorithms/models/README.md)。
+
+公共回归源码重建：`python tools/build_regression_operators.py`。
+测试：`python -m unittest discover -s 01_early_warning/tests -v`。
+
+## 凌晨
+
+以下十个算子返回 `{"out_1": result_df, "out_2": info_df}`，保留在 `LINGCHEN_OPERATORS` 中。
 
 | 算子名 | 单文件源码 | 功能 | 模型资源 |
 |---|---|---|---|
