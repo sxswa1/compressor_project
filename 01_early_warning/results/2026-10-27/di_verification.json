@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "unique_models": 6,
+  "new_models": 3,
+  "predictions_replayed": 873420,
+  "donor_assignments": 837,
+  "normal_unique_points": {
+    "development": 515,
+    "later": 1026
+  },
+  "source_hashes": true,
+  "fit_keys_and_normalization": true,
+  "training_evaluation_disjoint": true,
+  "labels_and_eligibility": true,
+  "all_seeds_preserved": true,
+  "independent_metrics": true,
+  "screen_recomputed": true,
+  "source_prediction_comparisons": [
+    {
+      "period": "development",
+      "seed": 20261023,
+      "points": 50641,
+      "max_raw_difference": 1.2200073241930287e-07,
+      "risk_disagreements": 0
+    },
+    {
+      "period": "development",
+      "seed": 20261024,
+      "points": 50641,
+      "max_raw_difference": 1.4986984253617663e-07,
+      "risk_disagreements": 0
+    },
+    {
+      "period": "development",
+      "seed": 20261025,
+      "points": 50641,
+      "max_raw_difference": 1.2232727050753844e-07,
+      "risk_disagreements": 0
+    },
+    {
+      "period": "later",
+      "seed": 20261023,
+      "points": 94929,
+      "max_raw_difference": 2.980194091506405e-08,
+      "risk_disagreements": 0
+    },
+    {
+      "period": "later",
+      "seed": 20261024,
+      "points": 94929,
+      "max_raw_difference": 2.980194091506405e-08,
+      "risk_disagreements": 0
+    },
+    {
+      "period": "later",
+      "seed": 20261025,
+      "points": 94929,
+      "max_raw_difference": 5.930328361714032e-08,
+      "risk_disagreements": 0
+    }
+  ]
+}

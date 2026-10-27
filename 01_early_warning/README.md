@@ -11,7 +11,7 @@
 | 四级风险 | LSTM 的 DI＋固定阈值 | 平均准确率 53.89%，种子范围 39.78%—75.68% |
 | RUL | 背景处理＋追加增强＋ExtraTrees | 场景平均 RMSE 10.824 小时；总体 RMSE÷平均参考 RUL 为 48.54% |
 
-Ridge、梯度提升、CUSUM、合并预警及简单基线均保留，模型可按参数切换。上表是测试中的方法比较，训练期原方案及全部对照见[实验报告](../docs/高淏宇/实验报告.md)和[结果表](../docs/高淏宇/实验结果表.xlsx)。
+Ridge、梯度提升、CUSUM、合并预警及简单基线均保留。ExtraTrees 的轨迹平均 RMSE 更低，梯度提升的总体 RMSE 和长寿命段误差更低，完整对照见[实验报告](../docs/高淏宇/实验报告.md)和[结果表](../docs/高淏宇/实验结果表.xlsx)。
 
 ## 数据与环境
 
@@ -50,6 +50,34 @@ python 01_early_warning/scripts/predict_research.py --input input.csv --output p
 输入为单设备、按时间递增的 CSV，包含 `Timestamp` 和 25 个测点，可选 `segment_id`。输出包括告警状态、新告警、DI、风险等级、RUL 及区间。缺测、时间缺口和历史不足保留无效标记。
 
 默认使用 EWMA、LSTM DI 和 ExtraTrees RUL。可用 `--warning-method`、`--di-model`、`--rul-model`、`--rul-variant` 切换。种子需显式指定；单个种子的预测不等于表中的三种子平均结果。
+
+## DataFlow 算子
+
+两个自包含算子位于 `dataflow_operators/health_assessment/`：
+
+- `compressor_early_warning.py`：EWMA 预警。
+- `compressor_risk_quantification.py`：LSTM DI、四级风险、ExtraTrees RUL 与区间。
+
+均提供顶层 `execute(df, ...)`，返回 `{"out_1": result_df}`。单文件源码可直接加载，不依赖研究脚本；输入、单位、参数和输出说明写在文件内。平台卡片由维护方根据源码生成。
+
+完成训练后，从仓库根目录导出已有模型：
+
+```powershell
+python 01_early_warning/scripts/export_dataflow_models.py --output 01_early_warning/outputs/dataflow_models
+python -m unittest discover -s 01_early_warning/tests -v
+```
+
+部署时将导出目录放到算子执行环境，使用该环境的路径传参。目录内含三个种子的权重、预处理配置、背景模型、区间半径及文件哈希；权重不随 Git 提交。输入表的测点和单位必须与模型一致，可以通过 `sensor_map_json` 映射列名。
+
+```python
+from dataflow_operators.health_assessment.compressor_early_warning import execute as warn
+from dataflow_operators.health_assessment.compressor_risk_quantification import execute as risk
+
+warning_df = warn(df, model_path="models/rcsd/warning.pkl")["out_1"]
+risk_df = risk(df, model_dir="models/rcsd", seed=20261024)["out_1"]
+```
+
+风险量化必须显式选择种子，单次预测不等于报告中的三种子平均指标。两个算子均按完整历史批量计算，调用之间不保存状态。各有效输出同时带有 `valid` 标记，历史不足时预测为空。完整测试还需准备公开数据和原训练模型；只有接口与阈值测试无需权重。
 
 ## 辅助实验
 
