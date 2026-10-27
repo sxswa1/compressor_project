@@ -1,0 +1,5 @@
+stage,method,active_points,valid_points,active_fraction,observed_active_hours,episodes,longest_observed_hours,top3_active_fraction,boundary_or_reset_episodes
+reserved_results,change_ewma,853,11562,0.07377616329354783,213.25,30,34.0,0.2731535756154748,0
+reserved_results,cusum,7306,11562,0.6318975955717004,1826.5,13,1339.5,0.8620312072269367,2
+reserved_results,limits,5,11562,0.00043245113302196853,1.25,1,1.25,1.0,0
+reserved_results,v3_core_limits,7426,11562,0.6422764227642277,1856.5,17,1339.5,0.848639913816321,2

@@ -1,0 +1,14 @@
+{
+  "scope": "training-period pilot only; no development validation or final test",
+  "task": "DI scalar regression; not a forecasting or warning acceptance experiment",
+  "history_points": 96,
+  "sampling_minutes": 15,
+  "training_stride": 4,
+  "train_backgrounds": 12,
+  "evaluation_backgrounds": 6,
+  "seed": 20261023,
+  "torch_threads": 2,
+  "lstm": {"hidden_size": 24, "num_layers": 1, "epochs": 6, "batch_size": 128, "learning_rate": 0.001},
+  "gradient_boosting": {"max_iter": 100, "learning_rate": 0.05, "max_leaf_nodes": 15, "min_samples_leaf": 20, "l2_regularization": 1.0},
+  "selection": "none; report both candidates and training-median control; do not replace existing models"
+}

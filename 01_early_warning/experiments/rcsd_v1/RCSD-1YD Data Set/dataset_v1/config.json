@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "source": "Centrifugal compressor _2022.xlsx",
+  "source_sha256": "384565606d78f857655ac01bc4b006a31ae9d095a00472e031a9f82070715e62",
+  "split_boundaries": ["2022-07-01", "2022-09-01"],
+  "seeds": {"train": 20261021, "validation": 20261022, "test": 20261023},
+  "sample_minutes": 15,
+  "stable_history_points": 96,
+  "source_block_points": 480,
+  "speed_band_edges": [6050, 6500, 7000, 8501],
+  "minimum_band_training_points": 200,
+  "background_robust_envelope": 8,
+  "anomaly_scale_multipliers": [2, 4, 6],
+  "anomaly_duration_points": [4, 24],
+  "degradation_nominal_hours": [12, 72],
+  "degradation_scale_multipliers": [4, 8],
+  "onset_points": [96, 144],
+  "censor_probability": 0.25,
+  "amplitude_caps": {"temperature": [3, 18], "pressure": [0.1, 0.8], "vibration": [3, 20], "axial": [0.01, 0.15]},
+  "bounds": {"temperature": [0, 160], "pressure": [0, 30], "differential_pressure": [0, 10], "vibration": [0, 150], "axial": [-0.8, 0.8], "speed": [0, 10000]},
+  "normal_jitter": false,
+  "note": "All synthetic amplitudes, durations, bounds, rates and lags are experimental assumptions, not measured compressor failure laws. Test-only piecewise rates are reserved for held-out shape evaluation."
+}

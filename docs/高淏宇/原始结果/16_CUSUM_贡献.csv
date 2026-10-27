@@ -1,0 +1,15 @@
+stage,source,stratum,scenes,backgrounds,ewma_hit,cusum_hit,limits_hit,union_hit,both,ewma_only,cusum_only,neither,branch_or,lost_vs_branch_or,gained_vs_ewma,lost_vs_ewma,cusum_unique_retained,union_without_ewma_or_cusum
+reserved_results,v2,main,159,22,145,146,0,142,136,9,10,4,155,13,4,7,4,0
+reserved_results,v2,amplitude_075,52,22,40,46,0,46,37,3,9,3,49,3,7,1,7,0
+reserved_results,v2,amplitude_125,52,22,49,50,0,48,48,1,2,1,51,3,0,1,0,0
+reserved_results,v2,lag_8,52,22,47,48,0,47,44,3,4,1,51,4,2,2,2,0
+reserved_results,v2,response_power_13,52,22,50,47,0,46,45,5,2,0,52,6,0,4,0,0
+reserved_results,v2,combined_weak_lag,52,22,44,38,0,47,31,13,7,1,51,4,6,3,6,0
+reserved_results,stress,ramp_24h_amp0.5,18,6,17,18,0,17,17,0,1,0,18,1,0,0,0,0
+reserved_results,stress,ramp_72h_amp0.5,18,6,11,14,0,15,9,2,5,2,16,1,5,1,5,0
+reserved_results,stress,ramp_168h_amp0.5,18,6,7,10,0,10,6,1,4,7,11,1,4,1,4,0
+reserved_results,stress,ramp_288h_amp0.5,18,6,6,6,0,7,5,1,1,11,7,0,1,0,1,0
+reserved_results,stress,ramp_24h_amp1,18,6,16,18,0,16,16,0,2,0,18,2,0,0,0,0
+reserved_results,stress,ramp_72h_amp1,18,6,14,17,0,15,13,1,4,0,18,3,3,2,3,0
+reserved_results,stress,ramp_168h_amp1,18,6,12,13,0,13,9,3,4,2,16,3,3,2,3,0
+reserved_results,stress,ramp_288h_amp1,18,6,9,12,0,12,9,0,3,6,12,0,3,0,3,0

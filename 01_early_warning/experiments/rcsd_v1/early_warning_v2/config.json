@@ -1,0 +1,16 @@
+{
+  "version": "2.0.0",
+  "fit_before": "2022-05-01",
+  "calibration_before": "2022-07-01",
+  "speed_edges": [6050, 6500, 7000, 8501],
+  "minimum_band_fit_points": 200,
+  "ridge_alpha": 10,
+  "history_points": 96,
+  "ewma_alpha": 0.2,
+  "threshold_quantile": 0.995,
+  "alarm_consecutive_points": 3,
+  "recovery_consecutive_points": 4,
+  "recovery_threshold_ratio": 0.7,
+  "methods": ["speed_binned", "change6", "change24", "change24_ewma"],
+  "test_scored": false
+}

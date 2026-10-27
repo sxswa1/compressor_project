@@ -1,0 +1,5 @@
+asset,radius_hours,background_count,order_statistic_rank,nominal_coverage,interpretation,points,scenes,point_coverage,whole_scene_coverage,whole_background_coverage,mean_width_hours,median_width_hours
+trees_history__residual_augmented__20261023,41.81305333474452,11,11,0.9,calibration diagnostics only; no independent performance or field coverage guarantee,11376,82,1.0,1.0,1.0,65.92856953669106,66.43495114336564
+trees_history__residual_augmented__20261024,41.60470094210584,11,11,0.9,calibration diagnostics only; no independent performance or field coverage guarantee,11376,82,1.0,1.0,1.0,65.7940487789373,66.51172646976286
+trees_history__residual_augmented__20261025,41.27931825692999,11,11,0.9,calibration diagnostics only; no independent performance or field coverage guarantee,11376,82,1.0,1.0,1.0,65.43394517350735,66.07609342240467
+gradient_boosting_history__residual_augmented__20261024,44.36983924091149,11,11,0.9,calibration diagnostics only; no independent performance or field coverage guarantee,11376,82,1.0,1.0,1.0,68.93288685714442,68.34864549477754

@@ -1,0 +1,23 @@
+{
+  "version": "1.1.0",
+  "fit_before": "2022-05-01",
+  "calibration_before": "2022-07-01",
+  "targets": ["75ZI801BA.pv", "75ZI801BB.pv", "75TI829.pv", "75TI830.pv", "75TI831.pv", "75TI832.pv", "75TI834.pv", "75TI836.pv", "75XI823BX.pv", "75XI824BX.pv", "75PI808.pv", "75PI823.pv"],
+  "ridge_alpha": 10,
+  "training_stride": 4,
+  "history_points": 96,
+  "sample_minutes": 15,
+  "ewma_alpha": 0.2,
+  "threshold_quantile": 0.995,
+  "alarm_consecutive_points": 3,
+  "recovery_consecutive_points": 4,
+  "recovery_threshold_ratio": 0.7,
+  "stuck_run_quantile": 0.995,
+  "stuck_point_tail_budget": 0.01,
+  "stuck_blocks_all_monitoring": false,
+  "channel_tail_scaling_quantile": 0.995,
+  "minimum_stuck_points": 4,
+  "operating_speed_bounds": [6050, 8500],
+  "methods": ["forecast", "reference", "reference_ewma"],
+  "final_test_scored": false
+}

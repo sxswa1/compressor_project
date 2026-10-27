@@ -1,0 +1,43 @@
+{
+  "version": "1.0",
+  "created": "2026-10-25",
+  "kind": "post-test-motivated training-period mechanism ablation",
+  "purpose": "Check whether removing absolute sensor levels preserves DI and risk information; not a new independent test or replacement",
+  "data": "Existing controlled_dataset_v2 train main scenes only; preserve censored DI labels, no invented endpoints or extra synthetic DI labels",
+  "fold_block_ranges": [[12,18],[18,24],[24,31]],
+  "split_rule": "Chronological train background blocks [0,a), evaluate [a,b); entire scene/background kept together; all rows before July 2022",
+  "history_points": 96,
+  "sampling_minutes": 15,
+  "training_stride": 4,
+  "running_speed_range": [6050,8500],
+  "baseline": "125 features in original order: current, mean last24, current minus first of last24, mean last96, current minus first of last96; all include current point",
+  "candidate": "50 features: columns 50:75 and 100:125 of the same baseline matrix; endpoint differences span 23 and 95 sample intervals (5.75 and 23.75 h)",
+  "models": "StandardScaler + Ridge(alpha=10) for each representation; one fit per fold, no search; median of sampled fit DI is an additional descriptive constant reference",
+  "prediction": "Raw DI saved, clip to [0,1]; risk I if >=0.85, II if >=0.65, III if >=0.4, else IV; no smoothing or new thresholds",
+  "metrics": {
+    "primary": "Scene mean absolute error averaged equally across three folds",
+    "additional": "Point MAE, bias, clipping fraction, background MAE, risk accuracy, macro F1, over/under risk fractions, per-class recall; report all folds",
+    "strata": "Existing nominal 12/24/48/72 h durations, groups and curve exponents; 48/72 h are slow only relative to this existing main experiment",
+    "pre_injection": "step<=onset, DI_ref=1 by construction, deduplicate source rows separately within each fold/model; check duplicate predictions agree",
+    "no_independent_sample_claim": "Scenes share source backgrounds; report counts, no point-based significance test"
+  },
+  "mechanism_probe": "For each fold, add training-scale constant offsets to all time steps of a valid evaluation window; check algebraic invariance of difference features in float64, not a realistic new fault test. Never use onset, label, duration, timestamp, source key or block ID as model input",
+  "advance_rule": {
+    "purpose": "Conservative auxiliary screen using the prior 1 percentage point recall tolerance; not a paper or project acceptance target",
+    "all_required": [
+      "Mean fold scene MAE strictly lower and every fold scene MAE no higher than baseline",
+      "Pooled recall of each reference risk class no more than 0.01 below baseline",
+      "Every fold reference-IV recall no more than 0.01 below baseline",
+      "Each existing 48 h and 72 h fold/stratum scene MAE no higher than baseline with support present",
+      "Mean fold absolute pre-injection mean bias no higher than baseline"
+    ],
+    "stop": "If any fails or support is absent, do not advance; preserve negative results and do not change features, alpha, risk boundaries or evaluation data"
+  },
+  "limitations": [
+    "Original injection amplitudes used Jan-Jun statistics; fitting is forward but generation is not fully forward",
+    "These backgrounds were used during research; post-test motivation prevents new independent-test claims",
+    "Construction labels describe injected damage, not verified field health",
+    "Constant-offset invariance alone does not establish useful health-state identifiability",
+    "No July-December observation parsing, scoring or tuning; original frozen artifacts unchanged"
+  ]
+}

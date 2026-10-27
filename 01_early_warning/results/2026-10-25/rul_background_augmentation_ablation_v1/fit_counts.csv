@@ -1,0 +1,13 @@
+fold,variant,fit_points,fit_scenes,fit_endpoints,evaluation_points,evaluation_scenes,evaluation_endpoints
+0,raw_original,1034,26,26,3984,29,29
+0,residual_original,1034,26,26,3984,29,29
+0,raw_augmented,6794,170,170,3984,29,29
+0,residual_augmented,6794,170,170,3984,29,29
+1,raw_original,1458,42,42,5472,34,34
+1,residual_original,1458,42,42,5472,34,34
+1,raw_augmented,10098,258,258,5472,34,34
+1,residual_augmented,10098,258,258,5472,34,34
+2,raw_original,2427,63,63,5136,29,29
+2,residual_original,2427,63,63,5136,29,29
+2,raw_augmented,13947,351,351,5136,29,29
+2,residual_augmented,13947,351,351,5136,29,29

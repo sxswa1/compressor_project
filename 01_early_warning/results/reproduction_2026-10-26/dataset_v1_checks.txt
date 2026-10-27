@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "verified_files": 29,
+  "splits": [
+    {
+      "split": "train",
+      "saved_rows": 123706,
+      "scenes": 403,
+      "unique_source_points": 13652,
+      "baseline_candidates": 16464
+    },
+    {
+      "split": "validation",
+      "saved_rows": 45391,
+      "scenes": 143,
+      "unique_source_points": 5006,
+      "baseline_candidates": 5719
+    },
+    {
+      "split": "test",
+      "saved_rows": 107667,
+      "scenes": 352,
+      "unique_source_points": 10042,
+      "baseline_candidates": 11166
+    }
+  ],
+  "checks": [
+    "file hashes",
+    "saved keys and sensor-only inputs",
+    "raw lineage and split separation",
+    "unaltered cells",
+    "intentional missingness",
+    "15-minute continuity",
+    "DI and risk",
+    "RUL from timestamps",
+    "censoring",
+    "channel-response reconstruction",
+    "baseline loader",
+    "test-only held-out family"
+  ]
+}

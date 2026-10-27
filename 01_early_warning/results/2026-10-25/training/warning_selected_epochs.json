@@ -1,0 +1,29 @@
+[
+  {
+    "seed": 20261023,
+    "epoch": 87,
+    "epochs_run": 92,
+    "stop_reason": "patience",
+    "selected_mse": 0.0829005060955857,
+    "last_mse": 0.08699689114046054,
+    "old_epoch30_mse": 0.1348737711501832
+  },
+  {
+    "seed": 20261024,
+    "epoch": 78,
+    "epochs_run": 83,
+    "stop_reason": "patience",
+    "selected_mse": 0.08950237006653376,
+    "last_mse": 0.08971464937237919,
+    "old_epoch30_mse": 0.1500674943260085
+  },
+  {
+    "seed": 20261025,
+    "epoch": 88,
+    "epochs_run": 93,
+    "stop_reason": "patience",
+    "selected_mse": 0.08358886065477551,
+    "last_mse": 0.09043532318190119,
+    "old_epoch30_mse": 0.1434686491536521
+  }
+]

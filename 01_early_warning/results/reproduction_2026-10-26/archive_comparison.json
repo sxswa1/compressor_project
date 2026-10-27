@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "file": "regression_family_summary.csv",
+      "rows": 108,
+      "columns": [
+        "seeds",
+        "seed_mean",
+        "seed_min",
+        "seed_max"
+      ]
+    },
+    {
+      "file": "warning_event_summary.csv",
+      "rows": 364,
+      "columns": [
+        "scenes",
+        "backgrounds",
+        "paired_hits",
+        "paired_two_hour",
+        "no_paired_event",
+        "paired_late_under_2h",
+        "median_paired_lead"
+      ]
+    },
+    {
+      "file": "empirical_metrics.csv",
+      "rows": 26,
+      "columns": [
+        "valid_points",
+        "total_points",
+        "active_fraction",
+        "new_events"
+      ]
+    }
+  ]
+}

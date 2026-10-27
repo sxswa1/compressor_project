@@ -1,0 +1,78 @@
+{
+  "原始结果\\01_保留预警_方法汇总.csv": {
+    "original": "final_evaluation_pipeline_v1/reserved_results/warning_family_summary.csv",
+    "sha256": "6915250428e0e250c4ff97b187141f13c2a0200db14ce95e100a9406cd402580"
+  },
+  "原始结果\\02_保留预警_事件统计.csv": {
+    "original": "final_evaluation_pipeline_v1/reserved_results/warning_event_summary.csv",
+    "sha256": "e760cdf60e3538d48c4612b41efca14f4b8ae18686d7be4cea105a353b1180f9"
+  },
+  "原始结果\\03_保留预警_原始运行.csv": {
+    "original": "final_evaluation_pipeline_v1/reserved_results/empirical_metrics.csv",
+    "sha256": "d6b0723721e3d9d184f2489f9e5325c2aa85fd159102b6ed5111762801b445a6"
+  },
+  "原始结果\\04_保留回归_方法汇总.csv": {
+    "original": "final_evaluation_pipeline_v1/reserved_results/regression_family_summary.csv",
+    "sha256": "214f8d6a98aecaca39a7d88c9a333667b19ab1fc7b8b6fc605a547186dce57ab"
+  },
+  "原始结果\\05_保留回归_逐种子指标.csv": {
+    "original": "final_evaluation_pipeline_v1/reserved_results/regression_metrics.csv",
+    "sha256": "c770f50ff795dba3632b34f744178ce1fb8b0c88d23f47f4ce9fa5b7a0fa23b0"
+  },
+  "原始结果\\06_开发回归_方法汇总.csv": {
+    "original": "final_evaluation_pipeline_v1/development_results/regression_family_summary.csv",
+    "sha256": "b0bf8faac2a4726ca433f64d9ed28a1ab951901662d57b75b64c78e906dba2fd"
+  },
+  "原始结果\\07_保留回归_背景重采样.csv": {
+    "original": "final_evaluation_pipeline_v1/reserved_results/regression_background_bootstrap.csv",
+    "sha256": "01071dfa79cdc83c54f4a8d38f98efa2baffcd37bcc4e04d88fcb599bc774ab1"
+  },
+  "原始结果\\08_RUL_训练侧消融.csv": {
+    "original": "rul_background_augmentation_ablation_v1/results/summary.csv",
+    "sha256": "16e89c7507bfb6731fafa68de6d9f0bf2843e0f7103f228ae1b83858bcb5aae1"
+  },
+  "原始结果\\09_有限记忆_原始运行.csv": {
+    "original": "warning_fading_cusum_v1/results/empirical_metrics.csv",
+    "sha256": "8aa4bbf65c84d627ccbd7ee616dd49793184591f652246fd7bbaf2c45d277f14"
+  },
+  "原始结果\\10_有限记忆_配对检出.csv": {
+    "original": "warning_fading_cusum_v1/results/paired_comparison.csv",
+    "sha256": "0382a90b0d50419495e98aa7def8b27c9cb2e82d80228b0b44f08a50500c22f0"
+  },
+  "原始结果\\11_DI变化量_三折指标.csv": {
+    "original": "di_change_only_v1/results/fold_metrics.csv",
+    "sha256": "8f6016026c6b60e0a38f35fd9bc2a14d611b6e0f800d599704655451be01d01a"
+  },
+  "原始结果\\12_DI变化量_汇总.csv": {
+    "original": "di_change_only_v1/results/paper_table.csv",
+    "sha256": "27e2f17f2c38aa16730b48386fba3856b77528e84699acc1a1c0f94f5a22c1f5"
+  },
+  "原始结果\\13_DI变化量_持续时间分层.csv": {
+    "original": "di_change_only_v1/results/duration_summary.csv",
+    "sha256": "59a1543f0ae8af56f524ca35f46b15bcb3fc44282b3363a6c3165c2b43ee48fd"
+  },
+  "原始结果\\14_DI变化量_注入前统计.csv": {
+    "original": "di_change_only_v1/results/pre_injection_summary.csv",
+    "sha256": "d77b97ca95b7fbcb48e20856de6e2c7550ae0bd881e24e4fd216720e458b6e56"
+  },
+  "原始结果\\15_DI保留_分层诊断.csv": {
+    "original": "di_temporal_error_analysis_v1/results/reserved_results_family_metrics.csv",
+    "sha256": "27e044a251b174da4c5f00eb8ef516cf1ec354942a4e92074086da64d353d450"
+  },
+  "原始结果\\16_CUSUM_贡献.csv": {
+    "original": "warning_cusum_contribution_v1/results/reserved_results_contribution_summary.csv",
+    "sha256": "27da4096ac96a53976a52fba55e32884e1a29dd4e92e24e65ec9b2a9c4434cff"
+  },
+  "原始结果\\18_DI_注入前诊断.csv": {
+    "original": "di_temporal_error_analysis_v1/results/pre_injection_family.csv",
+    "sha256": "b639c49886b4bb0cf1e234a9b47c341b5155558e12ffe9c95ed2cb0e499051df"
+  },
+  "原始结果\\19_CUSUM_告警时长.csv": {
+    "original": "warning_cusum_contribution_v1/results/reserved_results_episode_summary.csv",
+    "sha256": "95fa813309c6c218317cf72d0c8ebe64cd2278b02580f07452b7028e68afcff2"
+  },
+  "原始结果\\17_有限记忆_方法分层.csv": {
+    "original": "warning_fading_cusum_v1/results/summary.csv",
+    "sha256": "91d72cd3932d6b0c77f73a29dd422eb7a8475ad0fdcc940829fd9bb1c271d9e7"
+  }
+}

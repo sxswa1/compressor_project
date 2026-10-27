@@ -1,0 +1,12 @@
+{
+  "version": "1.0",
+  "base_experiment": "warning_matched_baselines_v1",
+  "max_epochs": 150,
+  "only_training_change": "Increase maximum epochs from 30 to 150; keep patience=5 and min_delta=0.0001",
+  "selection": "Jan-Mar fitting / April validation normalized prediction MSE; refit Jan-Apr at selected epoch count",
+  "calibration": "Re-estimate LSTM residual scales and 0.995 quantile on the same May-Jun points; identical calibration procedure, not identical numeric thresholds",
+  "evaluation": "Exactly the previous 422 scenes and July-Aug empirical replay; preserve all three seeds",
+  "stop_rule": "Run this fixed budget once; no epoch/seed/threshold selection using development warning outcomes",
+  "final_test_scored": false,
+  "replace_delivery": false
+}

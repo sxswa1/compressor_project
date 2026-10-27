@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "experiment": "di_change_only_v1",
+      "file": "fold_metrics.csv",
+      "rows": 9
+    },
+    {
+      "experiment": "di_change_only_v1",
+      "file": "stratified_metrics.csv",
+      "rows": 147
+    },
+    {
+      "experiment": "di_change_only_v1",
+      "file": "risk_confusion.csv",
+      "rows": 144
+    },
+    {
+      "experiment": "warning_fading_cusum_v1",
+      "file": "empirical_metrics.csv",
+      "rows": 6
+    },
+    {
+      "experiment": "warning_fading_cusum_v1",
+      "file": "paired_comparison.csv",
+      "rows": 9
+    }
+  ]
+}

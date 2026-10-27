@@ -1,0 +1,12 @@
+method,month,dominant_group,active_points
+cusum,2022-05,temperature,1310
+cusum,2022-05,vibration_axial,251
+cusum,2022-06,oil_pressure,129
+cusum,2022-06,temperature,294
+cusum,2022-06,vibration_axial,1152
+fading,2022-05,oil_pressure,23
+fading,2022-05,temperature,262
+fading,2022-05,vibration_axial,309
+fading,2022-06,oil_pressure,183
+fading,2022-06,temperature,207
+fading,2022-06,vibration_axial,723

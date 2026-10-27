@@ -1,0 +1,81 @@
+{
+  "passed": true,
+  "scenes_checked": 585,
+  "maximum_reconstruction_error": 7.105427357601002e-15,
+  "source_v1_checksums_verified": true,
+  "train_validation_source_overlap": 0,
+  "test_built": false,
+  "test_scored": false,
+  "splits": [
+    {
+      "split": "train",
+      "rows": 88678,
+      "scenes": 310,
+      "source_points": 14880
+    },
+    {
+      "split": "validation",
+      "rows": 81001,
+      "scenes": 275,
+      "source_points": 5280
+    }
+  ],
+  "label_counts": [
+    {
+      "split": "train",
+      "benchmark": "main",
+      "observed": false,
+      "censored": true,
+      "scenes": 51
+    },
+    {
+      "split": "train",
+      "benchmark": "main",
+      "observed": true,
+      "censored": false,
+      "scenes": 228
+    },
+    {
+      "split": "train",
+      "benchmark": "replay",
+      "observed": false,
+      "censored": false,
+      "scenes": 31
+    },
+    {
+      "split": "validation",
+      "benchmark": "main",
+      "observed": false,
+      "censored": true,
+      "scenes": 21
+    },
+    {
+      "split": "validation",
+      "benchmark": "main",
+      "observed": true,
+      "censored": false,
+      "scenes": 78
+    },
+    {
+      "split": "validation",
+      "benchmark": "replay",
+      "observed": false,
+      "censored": false,
+      "scenes": 11
+    },
+    {
+      "split": "validation",
+      "benchmark": "robustness",
+      "observed": false,
+      "censored": true,
+      "scenes": 35
+    },
+    {
+      "split": "validation",
+      "benchmark": "robustness",
+      "observed": true,
+      "censored": false,
+      "scenes": 130
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "sensors": [
+    "75ZI800BA.pv",
+    "75ZI800BB.pv",
+    "75ZI801BA.pv",
+    "75ZI801BB.pv",
+    "75PI808.pv",
+    "75PI823.pv",
+    "75PI870.pv",
+    "75PI845.pv",
+    "75PDI853.pv",
+    "75TI821.pv",
+    "75TI822.pv",
+    "75TI827.pv",
+    "75TI828.pv",
+    "75TI824.pv",
+    "75TI829.pv",
+    "75TI830.pv",
+    "75TI831.pv",
+    "75TI832.pv",
+    "75TI836.pv",
+    "75TI834.pv",
+    "75XI821BX.pv",
+    "75XI822BY.pv",
+    "75XI823BX.pv",
+    "75XI824BX.pv",
+    "75SI865R.pv"
+  ],
+  "history_points": 96,
+  "sampling_minutes": 15,
+  "running_speed_range": [
+    6050,
+    8500
+  ],
+  "risk_thresholds": [
+    0.85,
+    0.65,
+    0.4
+  ],
+  "feature_order": [
+    "current",
+    "last24_mean",
+    "current_minus_first_of_last24",
+    "last96_mean",
+    "current_minus_first_of_last96"
+  ],
+  "invalid_windows": "NaN output; gaps/missing/stopped rows reset 96-point history",
+  "label_columns_are_not_features": true,
+  "interval_lower_bound": 0
+}
