@@ -1,0 +1,42 @@
+{
+  "预警事件.csv": {
+    "source": "final_evaluation_pipeline_v1/reserved_results/warning_event_summary.csv",
+    "sha256": "e760cdf60e3538d48c4612b41efca14f4b8ae18686d7be4cea105a353b1180f9"
+  },
+  "原始运行告警.csv": {
+    "source": "final_evaluation_pipeline_v1/reserved_results/empirical_metrics.csv",
+    "sha256": "d6b0723721e3d9d184f2489f9e5325c2aa85fd159102b6ed5111762801b445a6"
+  },
+  "DI统一评测.csv": {
+    "source": "di_uniform_evaluation_v1/results/summary.csv",
+    "sha256": "3d891696c0cfa7e134c9244ab5f86e9c4fc7cdb38e4c0253b4aae5f9d8e12bca"
+  },
+  "DI逐种子.csv": {
+    "source": "di_uniform_evaluation_v1/results/seed_metrics.csv",
+    "sha256": "8c1f78e24cc409d1ea6e7b819c44fa2402fb37542d17dad8dc49453abdb57c44"
+  },
+  "RUL方法汇总.csv": {
+    "source": "rul_method_selection_v1/results/family_summary.csv",
+    "sha256": "44e8d42eaf549b9efe39ffae1b2cf74c8c0a2a1bc1444fc88e4a65d1edc9c246"
+  },
+  "RUL逐种子.csv": {
+    "source": "rul_method_selection_v1/results/asset_metrics.csv",
+    "sha256": "6a681359ed73fcb5b09e2d28bf958a6e9a34ff13a646627cfe92f70fc9a4bb8f"
+  },
+  "RUL寿命分段.csv": {
+    "source": "rul_method_selection_v1/results/stage_summary.csv",
+    "sha256": "9728020ebbaf2e0133abececfa859939180fb8c64690492190c006b8f125e101"
+  },
+  "RUL区间.csv": {
+    "source": "rul_method_selection_v1/results/interval_summary.csv",
+    "sha256": "38e3bcb58984f3c9bb57daeec17c463b7cf09b5ee35978729730c2c573bae44d"
+  },
+  "按预测风险分组的RUL.csv": {
+    "source": "rul_risk_diagnostic_v1/results/rul_by_lstm_risk_pooled.csv",
+    "sha256": "46d3129dc5b6a3390c226be7054b4efdeb05f7ab3ca687db6c0992977af3dff4"
+  },
+  "按预测风险分组的RUL逐种子.csv": {
+    "source": "rul_risk_diagnostic_v1/results/rul_by_lstm_risk.csv",
+    "sha256": "530713c0f89ecebcae9513e025b36dd4c2f1bf664985d81e8ffdc0e20f870426"
+  }
+}

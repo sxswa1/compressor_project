@@ -1,0 +1,5 @@
+period,family,point_coverage,whole_background_coverage,width
+development_results,gradient_boosting_history__residual_augmented,1.0,1.0,72.283121147777
+development_results,trees_history__residual_augmented,1.0,1.0,68.89788784317018
+reserved_results,gradient_boosting_history__residual_augmented,0.9998088685015291,0.8636363636363636,69.53898764750888
+reserved_results,trees_history__residual_augmented,0.9998598369011212,0.8787878787878788,63.62127952845835

@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "asset_periods": 42,
+  "prediction_rows_checked": 856800,
+  "stage_groups_checked": 294,
+  "exact_saved_predictions": true,
+  "source_labels": true,
+  "common_eligibility": true,
+  "original_metrics_reproduced": true,
+  "disjoint_stage_partition": true,
+  "seed_summary": true,
+  "dominance_check": true,
+  "new_models": 0
+}
